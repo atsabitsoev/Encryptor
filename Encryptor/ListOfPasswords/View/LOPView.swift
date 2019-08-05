@@ -18,12 +18,21 @@ class LOPView: UIViewController, LOPViewDelegate {
         super.viewDidLoad()
 
         configureView()
+        
+        controller.viewDidLoad()
     }
     
     
     private func configureView() {
         
         controller = LOPController(view: self)
+    }
+    
+    
+    func makeNavBarTranslucent() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     

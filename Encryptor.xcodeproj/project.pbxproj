@@ -16,6 +16,11 @@
 		AC29ED8322F8A07F0096947F /* ListOfPasswords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC29ED8222F8A07F0096947F /* ListOfPasswords.storyboard */; };
 		AC29ED8522F8A1890096947F /* LOPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED8422F8A1890096947F /* LOPView.swift */; };
 		AC29ED8722F8A59B0096947F /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED8622F8A59B0096947F /* RoundedCornersView.swift */; };
+		AC29ED8B22F8B02B0096947F /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED8A22F8B02B0096947F /* KeychainService.swift */; };
+		AC29ED8D22F8B03B0096947F /* AccountsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED8C22F8B03B0096947F /* AccountsListService.swift */; };
+		AC29ED9222F8B23F0096947F /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC29ED8F22F8B23F0096947F /* SF-Pro-Rounded-Regular.otf */; };
+		AC29ED9322F8B23F0096947F /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC29ED9022F8B23F0096947F /* SF-Pro-Rounded-Medium.otf */; };
+		AC29ED9422F8B23F0096947F /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC29ED9122F8B23F0096947F /* SF-Pro-Rounded-Bold.otf */; };
 		AC45C17C22F886C100E242A0 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45C17B22F886C100E242A0 /* SliderView.swift */; };
 		AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671B5B22F8864500207A1B /* AppDelegate.swift */; };
 		AC671B6322F8864800207A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6222F8864800207A1B /* Assets.xcassets */; };
@@ -32,6 +37,11 @@
 		AC29ED8222F8A07F0096947F /* ListOfPasswords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOfPasswords.storyboard; sourceTree = "<group>"; };
 		AC29ED8422F8A1890096947F /* LOPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPView.swift; sourceTree = "<group>"; };
 		AC29ED8622F8A59B0096947F /* RoundedCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
+		AC29ED8A22F8B02B0096947F /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		AC29ED8C22F8B03B0096947F /* AccountsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsListService.swift; sourceTree = "<group>"; };
+		AC29ED8F22F8B23F0096947F /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
+		AC29ED9022F8B23F0096947F /* SF-Pro-Rounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Medium.otf"; sourceTree = "<group>"; };
+		AC29ED9122F8B23F0096947F /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
 		AC45C17B22F886C100E242A0 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		AC671B5822F8864500207A1B /* Encryptor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encryptor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC671B5B22F8864500207A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 				AC671B5B22F8864500207A1B /* AppDelegate.swift */,
 				AC671B6222F8864800207A1B /* Assets.xcassets */,
 				AC671B6422F8864800207A1B /* LaunchScreen.storyboard */,
+				AC29ED8E22F8B2250096947F /* Шрифты */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -115,6 +126,25 @@
 				AC29ED8622F8A59B0096947F /* RoundedCornersView.swift */,
 			);
 			path = GlobalEntities;
+			sourceTree = "<group>";
+		};
+		AC29ED8922F8B0150096947F /* GlobalServicies */ = {
+			isa = PBXGroup;
+			children = (
+				AC29ED8A22F8B02B0096947F /* KeychainService.swift */,
+				AC29ED8C22F8B03B0096947F /* AccountsListService.swift */,
+			);
+			path = GlobalServicies;
+			sourceTree = "<group>";
+		};
+		AC29ED8E22F8B2250096947F /* Шрифты */ = {
+			isa = PBXGroup;
+			children = (
+				AC29ED9122F8B23F0096947F /* SF-Pro-Rounded-Bold.otf */,
+				AC29ED9022F8B23F0096947F /* SF-Pro-Rounded-Medium.otf */,
+				AC29ED8F22F8B23F0096947F /* SF-Pro-Rounded-Regular.otf */,
+			);
+			path = "Шрифты";
 			sourceTree = "<group>";
 		};
 		AC671B4F22F8864500207A1B = {
@@ -136,6 +166,7 @@
 		AC671B5A22F8864500207A1B /* Encryptor */ = {
 			isa = PBXGroup;
 			children = (
+				AC29ED8922F8B0150096947F /* GlobalServicies */,
 				AC29ED8822F8AA4F0096947F /* GlobalEntities */,
 				AC29ED6822F89D7C0096947F /* ListOfPasswords */,
 				AC29ED8122F8A0580096947F /* SupportingFiles */,
@@ -203,6 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC671B6622F8864800207A1B /* LaunchScreen.storyboard in Resources */,
+				AC29ED9322F8B23F0096947F /* SF-Pro-Rounded-Medium.otf in Resources */,
+				AC29ED9222F8B23F0096947F /* SF-Pro-Rounded-Regular.otf in Resources */,
+				AC29ED9422F8B23F0096947F /* SF-Pro-Rounded-Bold.otf in Resources */,
 				AC671B6322F8864800207A1B /* Assets.xcassets in Resources */,
 				AC29ED8322F8A07F0096947F /* ListOfPasswords.storyboard in Resources */,
 			);
@@ -219,6 +253,8 @@
 				AC29ED7722F89EB50096947F /* LOPModel.swift in Sources */,
 				AC29ED7D22F89EE50096947F /* LOPModelDelegate.swift in Sources */,
 				AC29ED8722F8A59B0096947F /* RoundedCornersView.swift in Sources */,
+				AC29ED8B22F8B02B0096947F /* KeychainService.swift in Sources */,
+				AC29ED8D22F8B03B0096947F /* AccountsListService.swift in Sources */,
 				AC45C17C22F886C100E242A0 /* SliderView.swift in Sources */,
 				AC29ED7222F89E720096947F /* LOPTableVIewDelegate.swift in Sources */,
 				AC29ED7F22F89EF00096947F /* LOPViewDelegate.swift in Sources */,

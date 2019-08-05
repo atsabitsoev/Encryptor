@@ -11,4 +11,6 @@ import Foundation
 
 protocol LOPViewDelegate {
     
+    
+    func makeNavBarTranslucent()
 }

@@ -19,6 +19,11 @@ class LOPController: LOPControllerDelegate {
     }
     
     
+    func viewDidLoad() {
+        view.makeNavBarTranslucent()
+    }
+    
+    
     private var view: LOPViewDelegate!
     private var model: LOPModelDelegate!
     

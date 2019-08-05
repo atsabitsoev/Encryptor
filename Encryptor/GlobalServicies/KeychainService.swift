@@ -1,5 +1,5 @@
 //
-//  LOPControllerDelegate.swift
+//  KeychainService.swift
 //  Encryptor
 //
 //  Created by Ацамаз Бицоев on 05/08/2019.
@@ -7,10 +7,3 @@
 //
 
 import Foundation
-
-
-protocol LOPControllerDelegate {
-    
-    
-    func viewDidLoad()
-}
