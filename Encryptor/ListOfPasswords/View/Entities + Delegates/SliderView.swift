@@ -16,18 +16,34 @@ class SliderView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        setDefaultValues()
-        configureMainButton()
+        commonInit()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        commonInit()
     }
     
     
-    private var slider: UIView!
+    private func commonInit() {
+        setDefaultValues()
+    }
+    
+    override func layoutSubviews() {
+        configureMainButton()
+        layer.cornerRadius = myCornerRadius
+    }
+    
+    
+    private var slider: UIView = UIView()
+    private var imageView: UIImageView = UIImageView()
     private var dragging = false
     
     
     @IBInspectable var butWidth: CGFloat = 100
     var butHeight: CGFloat!
-    @IBInspectable var myCornerRadius: CGFloat = 8
+    @IBInspectable var myCornerRadius: CGFloat = 0
     @IBInspectable var butColor1: UIColor = .red
     @IBInspectable var butColor2: UIColor = .blue
     
@@ -72,26 +88,41 @@ class SliderView: UIView {
         dragging = false
     }
     
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        goBackAnimation()
+    }
+    
     
     private func setDefaultValues() {
+        addSubview(slider)
         butHeight = bounds.height
-        layer.cornerRadius = myCornerRadius
         layer.masksToBounds = true
     }
     
     private func configureMainButton() {
-        slider = UIView(frame: CGRect(x: 0,
-                                          y: 0,
-                                          width: butWidth,
-                                          height: butHeight))
+        slider.frame = CGRect(x: 0,
+                              y: 0,
+                              width: butWidth,
+                              height: butHeight)
         slider.layer.cornerRadius = myCornerRadius
         slider.layer.masksToBounds = true
         
+        addSliderGradient()
+        setArrowImage()
+    }
+    
+    private func addSliderGradient() {
         let gradient = CAGradientLayer()
         gradient.frame = slider.bounds
-        gradient.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+        gradient.colors = [butColor1.cgColor, butColor2.cgColor]
         slider.layer.addSublayer(gradient)
-        addSubview(slider)
+    }
+    
+    private func setArrowImage() {
+        imageView.frame = slider.bounds.inset(by: UIEdgeInsets(top: 22, left: 22, bottom: 22, right: 22))
+        imageView.image = UIImage(named: "Стрелка вправо")
+        imageView.contentMode = .scaleAspectFit
+        slider.addSubview(imageView)
     }
     
     private func goBackAnimation() {

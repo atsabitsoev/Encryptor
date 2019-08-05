@@ -21,6 +21,7 @@
 		AC29ED9222F8B23F0096947F /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC29ED8F22F8B23F0096947F /* SF-Pro-Rounded-Regular.otf */; };
 		AC29ED9322F8B23F0096947F /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC29ED9022F8B23F0096947F /* SF-Pro-Rounded-Medium.otf */; };
 		AC29ED9422F8B23F0096947F /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AC29ED9122F8B23F0096947F /* SF-Pro-Rounded-Bold.otf */; };
+		AC29ED9722F8B52E0096947F /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED9622F8B52E0096947F /* AccountCell.swift */; };
 		AC45C17C22F886C100E242A0 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45C17B22F886C100E242A0 /* SliderView.swift */; };
 		AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671B5B22F8864500207A1B /* AppDelegate.swift */; };
 		AC671B6322F8864800207A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6222F8864800207A1B /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		AC29ED8F22F8B23F0096947F /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
 		AC29ED9022F8B23F0096947F /* SF-Pro-Rounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Medium.otf"; sourceTree = "<group>"; };
 		AC29ED9122F8B23F0096947F /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
+		AC29ED9622F8B52E0096947F /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		AC45C17B22F886C100E242A0 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		AC671B5822F8864500207A1B /* Encryptor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encryptor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC671B5B22F8864500207A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				AC29ED8422F8A1890096947F /* LOPView.swift */,
 				AC29ED7E22F89EF00096947F /* LOPViewDelegate.swift */,
+				AC29ED9522F8B5150096947F /* TableView */,
 				AC29ED8022F8A0260096947F /* Entities + Delegates */,
 			);
 			path = View;
@@ -103,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				AC45C17B22F886C100E242A0 /* SliderView.swift */,
-				AC29ED7122F89E720096947F /* LOPTableVIewDelegate.swift */,
 			);
 			path = "Entities + Delegates";
 			sourceTree = "<group>";
@@ -115,7 +117,6 @@
 				AC671B5B22F8864500207A1B /* AppDelegate.swift */,
 				AC671B6222F8864800207A1B /* Assets.xcassets */,
 				AC671B6422F8864800207A1B /* LaunchScreen.storyboard */,
-				AC29ED8E22F8B2250096947F /* Шрифты */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -147,6 +148,15 @@
 			path = "Шрифты";
 			sourceTree = "<group>";
 		};
+		AC29ED9522F8B5150096947F /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				AC29ED7122F89E720096947F /* LOPTableVIewDelegate.swift */,
+				AC29ED9622F8B52E0096947F /* AccountCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		AC671B4F22F8864500207A1B = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 				AC29ED6822F89D7C0096947F /* ListOfPasswords */,
 				AC29ED8122F8A0580096947F /* SupportingFiles */,
 				AC671B6722F8864800207A1B /* Info.plist */,
+				AC29ED8E22F8B2250096947F /* Шрифты */,
 			);
 			path = Encryptor;
 			sourceTree = "<group>";
@@ -259,6 +270,7 @@
 				AC29ED7222F89E720096947F /* LOPTableVIewDelegate.swift in Sources */,
 				AC29ED7F22F89EF00096947F /* LOPViewDelegate.swift in Sources */,
 				AC29ED7522F89EA70096947F /* LOPController.swift in Sources */,
+				AC29ED9722F8B52E0096947F /* AccountCell.swift in Sources */,
 				AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */,
 				AC29ED8522F8A1890096947F /* LOPView.swift in Sources */,
 			);
