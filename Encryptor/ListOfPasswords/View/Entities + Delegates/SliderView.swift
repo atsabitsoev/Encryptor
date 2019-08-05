@@ -33,11 +33,14 @@ class SliderView: UIView {
     override func layoutSubviews() {
         configureMainButton()
         layer.cornerRadius = myCornerRadius
+        configureLabTitle()
     }
     
     
     private var slider: UIView = UIView()
     private var imageView: UIImageView = UIImageView()
+    private var labTitle: UILabel = UILabel()
+    
     private var dragging = false
     
     
@@ -49,6 +52,7 @@ class SliderView: UIView {
     
     
     var action: () -> () = {}
+    var titleText: String = "Это текст"
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -128,6 +132,16 @@ class SliderView: UIView {
         imageView.contentMode = .scaleAspectFit
         slider.addSubview(imageView)
     }
+    
+    private func configureLabTitle() {
+        labTitle.frame = bounds.inset(by: UIEdgeInsets(top: 0, left: butWidth, bottom: 0, right: 0))
+        labTitle.text = titleText
+        labTitle.textColor = .white
+        labTitle.alpha = 0.9
+        labTitle.textAlignment = .center
+        insertSubview(labTitle, at: 0)
+    }
+    
     
     private func goBackAnimation() {
         UIView.animate(withDuration: 0.3) {
