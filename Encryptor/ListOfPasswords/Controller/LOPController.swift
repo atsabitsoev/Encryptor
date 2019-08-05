@@ -11,4 +11,15 @@ import Foundation
 
 class LOPController: LOPControllerDelegate {
     
+    
+    required init(view: LOPViewDelegate) {
+        
+        self.view = view
+        self.model = LOPModel(controller: self)
+    }
+    
+    
+    private var view: LOPViewDelegate!
+    private var model: LOPModelDelegate!
+    
 }

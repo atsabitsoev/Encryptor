@@ -10,11 +10,12 @@
 		AC29ED7222F89E720096947F /* LOPTableVIewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7122F89E720096947F /* LOPTableVIewDelegate.swift */; };
 		AC29ED7522F89EA70096947F /* LOPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7422F89EA70096947F /* LOPController.swift */; };
 		AC29ED7722F89EB50096947F /* LOPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7622F89EB50096947F /* LOPModel.swift */; };
-		AC29ED7922F89EC80096947F /* LOPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7822F89EC80096947F /* LOPView.swift */; };
 		AC29ED7B22F89ED90096947F /* LOPControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7A22F89ED90096947F /* LOPControllerDelegate.swift */; };
 		AC29ED7D22F89EE50096947F /* LOPModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7C22F89EE50096947F /* LOPModelDelegate.swift */; };
 		AC29ED7F22F89EF00096947F /* LOPViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7E22F89EF00096947F /* LOPViewDelegate.swift */; };
 		AC29ED8322F8A07F0096947F /* ListOfPasswords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC29ED8222F8A07F0096947F /* ListOfPasswords.storyboard */; };
+		AC29ED8522F8A1890096947F /* LOPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED8422F8A1890096947F /* LOPView.swift */; };
+		AC29ED8722F8A59B0096947F /* RoundedCornersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED8622F8A59B0096947F /* RoundedCornersView.swift */; };
 		AC45C17C22F886C100E242A0 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC45C17B22F886C100E242A0 /* SliderView.swift */; };
 		AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671B5B22F8864500207A1B /* AppDelegate.swift */; };
 		AC671B6322F8864800207A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6222F8864800207A1B /* Assets.xcassets */; };
@@ -25,11 +26,12 @@
 		AC29ED7122F89E720096947F /* LOPTableVIewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPTableVIewDelegate.swift; sourceTree = "<group>"; };
 		AC29ED7422F89EA70096947F /* LOPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPController.swift; sourceTree = "<group>"; };
 		AC29ED7622F89EB50096947F /* LOPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPModel.swift; sourceTree = "<group>"; };
-		AC29ED7822F89EC80096947F /* LOPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPView.swift; sourceTree = "<group>"; };
 		AC29ED7A22F89ED90096947F /* LOPControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPControllerDelegate.swift; sourceTree = "<group>"; };
 		AC29ED7C22F89EE50096947F /* LOPModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPModelDelegate.swift; sourceTree = "<group>"; };
 		AC29ED7E22F89EF00096947F /* LOPViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPViewDelegate.swift; sourceTree = "<group>"; };
 		AC29ED8222F8A07F0096947F /* ListOfPasswords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOfPasswords.storyboard; sourceTree = "<group>"; };
+		AC29ED8422F8A1890096947F /* LOPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPView.swift; sourceTree = "<group>"; };
+		AC29ED8622F8A59B0096947F /* RoundedCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
 		AC45C17B22F886C100E242A0 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		AC671B5822F8864500207A1B /* Encryptor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encryptor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC671B5B22F8864500207A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		AC29ED6822F89D7C0096947F /* ListOfPasswords */ = {
 			isa = PBXGroup;
 			children = (
+				AC29ED8822F8AA4F0096947F /* GlobalEntities */,
 				AC29ED7322F89E7A0096947F /* Controller */,
 				AC29ED6A22F89DB30096947F /* Model */,
 				AC29ED6922F89DA80096947F /* View */,
@@ -62,9 +65,9 @@
 		AC29ED6922F89DA80096947F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC29ED8022F8A0260096947F /* Entities + Delegates */,
-				AC29ED7822F89EC80096947F /* LOPView.swift */,
+				AC29ED8422F8A1890096947F /* LOPView.swift */,
 				AC29ED7E22F89EF00096947F /* LOPViewDelegate.swift */,
+				AC29ED8022F8A0260096947F /* Entities + Delegates */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +108,14 @@
 				AC671B6422F8864800207A1B /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		AC29ED8822F8AA4F0096947F /* GlobalEntities */ = {
+			isa = PBXGroup;
+			children = (
+				AC29ED8622F8A59B0096947F /* RoundedCornersView.swift */,
+			);
+			path = GlobalEntities;
 			sourceTree = "<group>";
 		};
 		AC671B4F22F8864500207A1B = {
@@ -207,12 +218,13 @@
 				AC29ED7B22F89ED90096947F /* LOPControllerDelegate.swift in Sources */,
 				AC29ED7722F89EB50096947F /* LOPModel.swift in Sources */,
 				AC29ED7D22F89EE50096947F /* LOPModelDelegate.swift in Sources */,
+				AC29ED8722F8A59B0096947F /* RoundedCornersView.swift in Sources */,
 				AC45C17C22F886C100E242A0 /* SliderView.swift in Sources */,
 				AC29ED7222F89E720096947F /* LOPTableVIewDelegate.swift in Sources */,
 				AC29ED7F22F89EF00096947F /* LOPViewDelegate.swift in Sources */,
-				AC29ED7922F89EC80096947F /* LOPView.swift in Sources */,
 				AC29ED7522F89EA70096947F /* LOPController.swift in Sources */,
 				AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */,
+				AC29ED8522F8A1890096947F /* LOPView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

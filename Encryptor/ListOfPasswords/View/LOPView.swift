@@ -8,7 +8,25 @@
 
 import UIKit
 
-
 class LOPView: UIViewController, LOPViewDelegate {
     
+    
+    private var controller: LOPControllerDelegate!
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        configureView()
+    }
+    
+    
+    private func configureView() {
+        
+        controller = LOPController(view: self)
+    }
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
+
 }
