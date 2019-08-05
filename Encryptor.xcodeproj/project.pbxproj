@@ -54,7 +54,6 @@
 		AC29ED6822F89D7C0096947F /* ListOfPasswords */ = {
 			isa = PBXGroup;
 			children = (
-				AC29ED8822F8AA4F0096947F /* GlobalEntities */,
 				AC29ED7322F89E7A0096947F /* Controller */,
 				AC29ED6A22F89DB30096947F /* Model */,
 				AC29ED6922F89DA80096947F /* View */,
@@ -137,6 +136,7 @@
 		AC671B5A22F8864500207A1B /* Encryptor */ = {
 			isa = PBXGroup;
 			children = (
+				AC29ED8822F8AA4F0096947F /* GlobalEntities */,
 				AC29ED6822F89D7C0096947F /* ListOfPasswords */,
 				AC29ED8122F8A0580096947F /* SupportingFiles */,
 				AC671B6722F8864800207A1B /* Info.plist */,
