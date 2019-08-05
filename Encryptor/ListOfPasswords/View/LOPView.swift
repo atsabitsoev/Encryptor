@@ -13,7 +13,10 @@ class LOPView: UIViewController, LOPViewDelegate {
     
     private var controller: LOPControllerDelegate!
     
-
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +36,17 @@ class LOPView: UIViewController, LOPViewDelegate {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    
+    @objc
+    func stopScrolling() {
+        tableView.isScrollEnabled = false
+    }
+    
+    @objc
+    func startScrolling() {
+        tableView.isScrollEnabled = true
     }
     
     

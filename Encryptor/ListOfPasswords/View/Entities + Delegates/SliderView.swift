@@ -57,6 +57,8 @@ class SliderView: UIView {
             touch.location(in: self).x <= butWidth {
             dragging = true
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "sliderBegan"), object: nil)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -86,6 +88,8 @@ class SliderView: UIView {
         }
         
         dragging = false
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "sliderEnded"), object: nil)
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {

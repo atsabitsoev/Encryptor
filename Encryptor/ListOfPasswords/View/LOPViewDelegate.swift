@@ -8,9 +8,11 @@
 
 import Foundation
 
-
+@objc
 protocol LOPViewDelegate {
     
     
     func makeNavBarTranslucent()
+    @objc func stopScrolling()
+    @objc func startScrolling()
 }
