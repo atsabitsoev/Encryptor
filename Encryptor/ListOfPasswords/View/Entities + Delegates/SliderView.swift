@@ -41,7 +41,15 @@ class SliderView: UIView {
     private var imageView: UIImageView = UIImageView()
     private var labTitle: UILabel = UILabel()
     
-    private var dragging = false
+    private var dragging = false {
+        didSet {
+            if dragging {
+                hideLabTitle()
+            } else {
+                showLabTitle()
+            }
+        }
+    }
     
     
     @IBInspectable var butWidth: CGFloat = 100
@@ -89,9 +97,8 @@ class SliderView: UIView {
             freezeSlider(seconds: 1)
         } else {
             goBackAnimation()
+            dragging = false
         }
-        
-        dragging = false
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "sliderEnded"), object: nil)
     }
@@ -155,6 +162,7 @@ class SliderView: UIView {
                              repeats: false) { (timer) in
                                 self.isUserInteractionEnabled = true
                                 self.sliderToStartPosition()
+                                self.dragging = false
         }
     }
     
@@ -162,6 +170,19 @@ class SliderView: UIView {
         
         UIView.animate(withDuration: 0.3) {
             self.slider.center.x = self.butWidth / 2
+        }
+    }
+    
+    
+    private func hideLabTitle() {
+        UIView.animate(withDuration: 0.3) {
+            self.labTitle.alpha = 0
+        }
+    }
+    
+    private func showLabTitle() {
+        UIView.animate(withDuration: 0.3) {
+            self.labTitle.alpha = 0.9
         }
     }
 

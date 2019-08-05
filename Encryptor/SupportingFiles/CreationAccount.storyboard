@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sEe-Fm-pQu">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Bold.otf">
+            <string>SFProRounded-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6kc-Ri-pRZ">
+            <objects>
+                <viewController id="sEe-Fm-pQu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jtB-rC-aSB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yyM-x4-t2o" customClass="ViewUnderTextFields" customModule="Encryptor" customModuleProvider="target">
+                                <rect key="frame" x="100.5" y="381" width="213" height="134"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="mainColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSmall" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9P-jw-neg" customClass="EncryptionButView" customModule="Encryptor" customModuleProvider="target">
+                                <rect key="frame" x="100.5" y="381" width="213" height="134"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="213" id="QXN-Bh-CLO"/>
+                                    <constraint firstAttribute="height" constant="134" id="rs5-uf-4jA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="24"/>
+                                <state key="normal" title="Encrypt"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S9P-jw-neg" firstAttribute="centerX" secondItem="jtB-rC-aSB" secondAttribute="centerX" id="FGo-bD-bBX"/>
+                            <constraint firstItem="yyM-x4-t2o" firstAttribute="trailing" secondItem="S9P-jw-neg" secondAttribute="trailing" id="Ffx-gw-nwB"/>
+                            <constraint firstItem="S9P-jw-neg" firstAttribute="bottom" secondItem="yyM-x4-t2o" secondAttribute="bottom" id="M41-xW-Ybk"/>
+                            <constraint firstItem="S9P-jw-neg" firstAttribute="centerY" secondItem="jtB-rC-aSB" secondAttribute="centerY" id="aX5-oV-L6N"/>
+                            <constraint firstItem="S9P-jw-neg" firstAttribute="top" secondItem="yyM-x4-t2o" secondAttribute="top" id="atN-1e-y45"/>
+                            <constraint firstItem="yyM-x4-t2o" firstAttribute="leading" secondItem="S9P-jw-neg" secondAttribute="leading" id="z66-6A-9Vc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nz7-Xm-1Ej"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pip-kE-M8V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="18.75"/>
+        </scene>
+    </scenes>
+</document>
