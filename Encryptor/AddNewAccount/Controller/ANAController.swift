@@ -13,7 +13,7 @@ class ANAController: ANAControllerDelegate {
     
     
     required init(view: ANAViewDelegate) {
-        self.veiw = view
+        self.view = view
         self.model = ANAModel(controller: self)
     }
     
