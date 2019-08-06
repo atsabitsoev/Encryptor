@@ -11,5 +11,9 @@ import Foundation
 
 protocol ANAViewDelegate {
     
-    
+    func addActionsToButEncrypt(tapAction: @escaping () -> (),
+                                finishAction: @escaping () -> ())
+    func getAccount() -> [String]
+    func stopUserInteractions()
+    func startUserInteractions()
 }

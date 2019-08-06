@@ -17,5 +17,25 @@ class ANAModel: ANAModelDelegate {
     }
     
     
+    func saveAccount(title: String,
+                     login: String,
+                     password: String) {
+        
+        saveTitleLogin(title: title, login: login)
+        savePassword(login: login, password: password)
+    }
+    
+    
+    private func saveTitleLogin(title: String, login: String) {
+        var list = AccountListService.standard.accountList
+        list[title] = login
+        AccountListService.standard.accountList = list
+    }
+    
+    private func savePassword(login: String, password: String) {
+        KeychainService.save(login: login, password: password)
+    }
+    
+    
     private var controller: ANAControllerDelegate!
 }

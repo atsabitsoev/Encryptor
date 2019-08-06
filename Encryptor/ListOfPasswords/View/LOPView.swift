@@ -17,6 +17,9 @@ class LOPView: UIViewController, LOPViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     
+    var accountList: [String: String]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +39,11 @@ class LOPView: UIViewController, LOPViewDelegate {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    func updateData(accountList: [String: String]) {
+        self.accountList = accountList
+        tableView.reloadData()
     }
     
     

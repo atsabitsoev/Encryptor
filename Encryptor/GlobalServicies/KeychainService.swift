@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import KeychainSwift
+
+
+class KeychainService {
+    
+    
+    static func save(login: String, password: String) {
+        KeychainSwift().set(password, forKey: login)
+    }
+    
+    static func password(for login: String) -> String {
+        return KeychainSwift().get(login) ?? ""
+    }
+}

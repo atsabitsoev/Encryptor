@@ -11,5 +11,5 @@ import Foundation
 
 protocol ANAControllerDelegate {
     
-    
+    func viewDidLoad()
 }

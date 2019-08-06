@@ -11,6 +11,7 @@ import Foundation
 @objc
 protocol LOPViewDelegate {
     
+    func updateData(accountList: [String: String])
     
     func makeNavBarTranslucent()
     @objc func stopScrolling()

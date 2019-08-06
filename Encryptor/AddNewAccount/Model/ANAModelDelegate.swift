@@ -11,5 +11,7 @@ import Foundation
 
 protocol ANAModelDelegate {
     
-    
+    func saveAccount(title: String,
+                     login: String,
+                     password: String)
 }

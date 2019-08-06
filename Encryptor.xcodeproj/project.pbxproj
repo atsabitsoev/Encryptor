@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22D0A2EAE0FE32306B959457 /* Pods_Encryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121EF8B79D105100889ABFFE /* Pods_Encryptor.framework */; };
 		AC29ED7222F89E720096947F /* LOPTableVIewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7122F89E720096947F /* LOPTableVIewDelegate.swift */; };
 		AC29ED7522F89EA70096947F /* LOPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7422F89EA70096947F /* LOPController.swift */; };
 		AC29ED7722F89EB50096947F /* LOPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC29ED7622F89EB50096947F /* LOPModel.swift */; };
@@ -38,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121EF8B79D105100889ABFFE /* Pods_Encryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Encryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C0315DD1F025F10217DAF0F /* Pods-Encryptor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encryptor.release.xcconfig"; path = "Target Support Files/Pods-Encryptor/Pods-Encryptor.release.xcconfig"; sourceTree = "<group>"; };
 		AC29ED7122F89E720096947F /* LOPTableVIewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPTableVIewDelegate.swift; sourceTree = "<group>"; };
 		AC29ED7422F89EA70096947F /* LOPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPController.swift; sourceTree = "<group>"; };
 		AC29ED7622F89EB50096947F /* LOPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOPModel.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		ACEC6A1E22F8FF7000D95B9C /* ANAControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANAControllerDelegate.swift; sourceTree = "<group>"; };
 		ACEC6A2022F8FF8500D95B9C /* ANAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANAModel.swift; sourceTree = "<group>"; };
 		ACEC6A2222F8FF8F00D95B9C /* ANAModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANAModelDelegate.swift; sourceTree = "<group>"; };
+		B2693E7DE1574C38CFA4B3F3 /* Pods-Encryptor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Encryptor.debug.xcconfig"; path = "Target Support Files/Pods-Encryptor/Pods-Encryptor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,12 +79,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D0A2EAE0FE32306B959457 /* Pods_Encryptor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22123D2F24E4D2EC4B6137A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				121EF8B79D105100889ABFFE /* Pods_Encryptor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC29ED6822F89D7C0096947F /* ListOfPasswords */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +194,8 @@
 			children = (
 				AC671B5A22F8864500207A1B /* Encryptor */,
 				AC671B5922F8864500207A1B /* Products */,
+				C13A628751FC70D43725047C /* Pods */,
+				22123D2F24E4D2EC4B6137A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +268,16 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		C13A628751FC70D43725047C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2693E7DE1574C38CFA4B3F3 /* Pods-Encryptor.debug.xcconfig */,
+				8C0315DD1F025F10217DAF0F /* Pods-Encryptor.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC671B6A22F8864800207A1B /* Build configuration list for PBXNativeTarget "Encryptor" */;
 			buildPhases = (
+				A894489EEAF73495C5E212A0 /* [CP] Check Pods Manifest.lock */,
 				AC671B5422F8864500207A1B /* Sources */,
 				AC671B5522F8864500207A1B /* Frameworks */,
 				AC671B5622F8864500207A1B /* Resources */,
+				707D2EC4AF79BD883A64D5EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,6 +349,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		707D2EC4AF79BD883A64D5EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Encryptor/Pods-Encryptor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Encryptor/Pods-Encryptor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A894489EEAF73495C5E212A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Encryptor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC671B5422F8864500207A1B /* Sources */ = {
@@ -484,6 +558,7 @@
 		};
 		AC671B6B22F8864800207A1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2693E7DE1574C38CFA4B3F3 /* Pods-Encryptor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -503,6 +578,7 @@
 		};
 		AC671B6C22F8864800207A1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C0315DD1F025F10217DAF0F /* Pods-Encryptor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

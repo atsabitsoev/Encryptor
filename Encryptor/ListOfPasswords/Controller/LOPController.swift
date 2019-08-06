@@ -26,6 +26,7 @@ class LOPController: LOPControllerDelegate {
     func viewDidLoad() {
         view.makeNavBarTranslucent()
         addObservers()
+        view.updateData(accountList: AccountListService.standard.accountList)
     }
     
     

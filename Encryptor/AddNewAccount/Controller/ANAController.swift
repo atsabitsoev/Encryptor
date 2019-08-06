@@ -18,6 +18,24 @@ class ANAController: ANAControllerDelegate {
     }
     
     
+    func viewDidLoad() {
+        view.addActionsToButEncrypt(tapAction: tapAction,
+                                    finishAction: <#T##() -> ()#>)
+    }
+    
+    
+    private func tapAction() {
+        view.stopUserInteractions()
+        let account = view.getAccount()
+        model.saveAccount(title: account[0], login: account[1], password: account[2])
+    }
+    
+    private func finishAction() {
+        view.startUserInteractions()
+        view.goToRootVC()
+    }
+    
+    
     private var view: ANAViewDelegate!
     private var model: ANAModelDelegate!
 }
