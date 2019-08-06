@@ -9,7 +9,6 @@
 import UIKit
 
 
-@IBDesignable
 class EncryptionButView: UIButton {
 
     
@@ -27,6 +26,14 @@ class EncryptionButView: UIButton {
         addTargets()
         stateChangedToStart()
         setTextLabel()
+    }
+    
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        layer.cornerRadius = bounds.height / 2
+        clipsToBounds = true
     }
     
     
@@ -53,7 +60,8 @@ class EncryptionButView: UIButton {
     }
     
     
-    var action: () -> () = {}
+    var actionEncrypt: () -> () = {}
+    var actionOnFinish: () -> () = {}
     
     
     private func addTargets() {
@@ -64,12 +72,10 @@ class EncryptionButView: UIButton {
     }
     
     
-    // События воздействия на кнопку
-    
     @objc private func touchUpInside() {
         isUserInteractionEnabled = false
         nextState()
-        action()
+        actionEncrypt()
     }
     
     
@@ -97,7 +103,11 @@ class EncryptionButView: UIButton {
     }
     
     private func stateChangedToReady() {
-        
+        imageViewRotating.image = #imageLiteral(resourceName: "Щит")
+        Timer.scheduledTimer(withTimeInterval: 1,
+                             repeats: false) { (_ ) in
+                                self.actionOnFinish()
+        }
     }
     
     
@@ -107,6 +117,7 @@ class EncryptionButView: UIButton {
         
         UIView.animate(withDuration: 0.3,
                        animations: {
+                        
                         self.frame = CGRect(x: self.center.x - circleRadius,
                                             y: self.center.y - circleRadius,
                                             width: circleRadius * 2,
@@ -123,9 +134,9 @@ class EncryptionButView: UIButton {
     
     private func showAnimationImage() {
         imageViewRotating.frame = CGRect(x: 0, y: 0, width: bounds.height, height: bounds.height).inset(by: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15))
+        imageViewRotating.contentMode = .scaleAspectFit
         imageViewRotating.image = #imageLiteral(resourceName: "spinner-circle")
         self.addSubview(imageViewRotating)
-        
         
         let basicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         basicAnimation.duration = 3
@@ -134,6 +145,16 @@ class EncryptionButView: UIButton {
         basicAnimation.fillMode = .forwards
         basicAnimation.isRemovedOnCompletion = false
         self.imageViewRotating.layer.add(basicAnimation, forKey: "gaugeRotationAnimation")
+        
+        setTimerGoingToReady()
+    }
+    
+    private func setTimerGoingToReady() {
+        
+        Timer.scheduledTimer(withTimeInterval: 3,
+                             repeats: false) { (_ ) in
+                                self.buttonState = .ready
+        }
     }
 
 }
