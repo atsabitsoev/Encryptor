@@ -274,7 +274,6 @@
 				B2693E7DE1574C38CFA4B3F3 /* Pods-Encryptor.debug.xcconfig */,
 				8C0315DD1F025F10217DAF0F /* Pods-Encryptor.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

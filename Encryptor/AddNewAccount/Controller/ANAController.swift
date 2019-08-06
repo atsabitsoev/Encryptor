@@ -20,7 +20,7 @@ class ANAController: ANAControllerDelegate {
     
     func viewDidLoad() {
         view.addActionsToButEncrypt(tapAction: tapAction,
-                                    finishAction: <#T##() -> ()#>)
+                                    finishAction: finishAction)
     }
     
     

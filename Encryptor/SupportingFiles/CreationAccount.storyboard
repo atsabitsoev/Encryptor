@@ -21,7 +21,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View-->
+        <!--New account-->
         <scene sceneID="6kc-Ri-pRZ">
             <objects>
                 <viewController id="sEe-Fm-pQu" customClass="ANAView" customModule="Encryptor" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,6 +189,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nz7-Xm-1Ej"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New account" id="RdB-e3-SKc"/>
                     <connections>
                         <outlet property="butEncrypt" destination="S9P-jw-neg" id="nKM-NH-VSZ"/>
                         <outlet property="tfLogin" destination="8zi-RO-f3L" id="VK8-5L-oOn"/>

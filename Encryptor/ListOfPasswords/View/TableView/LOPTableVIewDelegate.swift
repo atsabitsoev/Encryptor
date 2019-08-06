@@ -13,12 +13,13 @@ extension LOPView: UITableViewDataSource, UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return accountList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell") as! AccountCell
+        cell.title = masTitles[indexPath.row]
         return cell
     }
     

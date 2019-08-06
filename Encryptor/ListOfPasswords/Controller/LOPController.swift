@@ -29,6 +29,11 @@ class LOPController: LOPControllerDelegate {
         view.updateData(accountList: AccountListService.standard.accountList)
     }
     
+    func viewDidAppear() {
+        view.updateData(accountList: AccountListService.standard.accountList)
+        print(AccountListService.standard.accountList)
+    }
+    
     
     private func addObservers() {
         

@@ -13,4 +13,5 @@ protocol LOPControllerDelegate {
     
     
     func viewDidLoad()
+    func viewDidAppear()
 }

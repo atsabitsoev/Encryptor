@@ -18,6 +18,7 @@ class LOPView: UIViewController, LOPViewDelegate {
     
     
     var accountList: [String: String]!
+    var masTitles: [String] = []
     
     
     override func viewDidLoad() {
@@ -28,10 +29,22 @@ class LOPView: UIViewController, LOPViewDelegate {
         controller.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        controller.viewDidAppear()
+    }
+    
     
     private func configureView() {
         
         controller = LOPController(view: self)
+    }
+    
+    
+    private func setNewLists() {
+        
+        for i in accountList {
+            masTitles.append(i.key)
+        }
     }
     
     
@@ -43,6 +56,8 @@ class LOPView: UIViewController, LOPViewDelegate {
     
     func updateData(accountList: [String: String]) {
         self.accountList = accountList
+        masTitles = []
+        setNewLists()
         tableView.reloadData()
     }
     
@@ -55,6 +70,13 @@ class LOPView: UIViewController, LOPViewDelegate {
     @objc
     func startScrolling() {
         tableView.isScrollEnabled = true
+    }
+    
+    
+    @IBAction func butAddTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "CreationAccount", bundle: nil)
+        let creationAccountVC = storyboard.instantiateInitialViewController()
+        self.navigationController?.show(creationAccountVC!, sender: nil)
     }
     
     
