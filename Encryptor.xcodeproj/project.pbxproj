@@ -195,8 +195,6 @@
 		AC671B5A22F8864500207A1B /* Encryptor */ = {
 			isa = PBXGroup;
 			children = (
-				AC29ED9B22F8D6EB0096947F /* EncryptionButView.swift */,
-				AC29ED9D22F8DDFF0096947F /* ViewUnderTextFields.swift */,
 				AC29ED8922F8B0150096947F /* GlobalServicies */,
 				AC29ED8822F8AA4F0096947F /* GlobalEntities */,
 				AC29ED6822F89D7C0096947F /* ListOfPasswords */,
@@ -212,8 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				ACEC6A1522F8FF0700D95B9C /* Model */,
-				ACEC6A1422F8FF0500D95B9C /* View */,
 				ACEC6A1322F8FF0300D95B9C /* Controller */,
+				ACEC6A1422F8FF0500D95B9C /* View */,
 			);
 			path = AddNewAccount;
 			sourceTree = "<group>";
@@ -232,6 +230,7 @@
 			children = (
 				ACEC6A1622F8FF3C00D95B9C /* ANAView.swift */,
 				ACEC6A1A22F8FF5A00D95B9C /* ANAViewDelegate.swift */,
+				ACEC6A2422F9013A00D95B9C /* Entities */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -243,6 +242,15 @@
 				ACEC6A2222F8FF8F00D95B9C /* ANAModelDelegate.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ACEC6A2422F9013A00D95B9C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AC29ED9B22F8D6EB0096947F /* EncryptionButView.swift */,
+				AC29ED9D22F8DDFF0096947F /* ViewUnderTextFields.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
