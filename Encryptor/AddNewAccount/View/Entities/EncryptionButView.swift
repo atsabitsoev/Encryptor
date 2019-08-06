@@ -37,6 +37,13 @@ class EncryptionButView: UIButton {
     }
     
     
+    override var frame: CGRect {
+        didSet {
+            print(frame)
+        }
+    }
+    
+    
     private var imageViewRotating: UIImageView = UIImageView()
     
     
