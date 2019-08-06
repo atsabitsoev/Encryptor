@@ -29,6 +29,12 @@
 		AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671B5B22F8864500207A1B /* AppDelegate.swift */; };
 		AC671B6322F8864800207A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6222F8864800207A1B /* Assets.xcassets */; };
 		AC671B6622F8864800207A1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6422F8864800207A1B /* LaunchScreen.storyboard */; };
+		ACEC6A1722F8FF3C00D95B9C /* ANAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC6A1622F8FF3C00D95B9C /* ANAView.swift */; };
+		ACEC6A1B22F8FF5A00D95B9C /* ANAViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC6A1A22F8FF5A00D95B9C /* ANAViewDelegate.swift */; };
+		ACEC6A1D22F8FF6400D95B9C /* ANAController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC6A1C22F8FF6400D95B9C /* ANAController.swift */; };
+		ACEC6A1F22F8FF7000D95B9C /* ANAControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC6A1E22F8FF7000D95B9C /* ANAControllerDelegate.swift */; };
+		ACEC6A2122F8FF8500D95B9C /* ANAModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC6A2022F8FF8500D95B9C /* ANAModel.swift */; };
+		ACEC6A2322F8FF8F00D95B9C /* ANAModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEC6A2222F8FF8F00D95B9C /* ANAModelDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +62,12 @@
 		AC671B6222F8864800207A1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC671B6522F8864800207A1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC671B6722F8864800207A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACEC6A1622F8FF3C00D95B9C /* ANAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANAView.swift; sourceTree = "<group>"; };
+		ACEC6A1A22F8FF5A00D95B9C /* ANAViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANAViewDelegate.swift; sourceTree = "<group>"; };
+		ACEC6A1C22F8FF6400D95B9C /* ANAController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANAController.swift; sourceTree = "<group>"; };
+		ACEC6A1E22F8FF7000D95B9C /* ANAControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANAControllerDelegate.swift; sourceTree = "<group>"; };
+		ACEC6A2022F8FF8500D95B9C /* ANAModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANAModel.swift; sourceTree = "<group>"; };
+		ACEC6A2222F8FF8F00D95B9C /* ANAModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANAModelDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,11 +200,49 @@
 				AC29ED8922F8B0150096947F /* GlobalServicies */,
 				AC29ED8822F8AA4F0096947F /* GlobalEntities */,
 				AC29ED6822F89D7C0096947F /* ListOfPasswords */,
+				ACEC6A1222F8FEEE00D95B9C /* AddNewAccount */,
 				AC29ED8122F8A0580096947F /* SupportingFiles */,
 				AC671B6722F8864800207A1B /* Info.plist */,
 				AC29ED8E22F8B2250096947F /* Шрифты */,
 			);
 			path = Encryptor;
+			sourceTree = "<group>";
+		};
+		ACEC6A1222F8FEEE00D95B9C /* AddNewAccount */ = {
+			isa = PBXGroup;
+			children = (
+				ACEC6A1522F8FF0700D95B9C /* Model */,
+				ACEC6A1422F8FF0500D95B9C /* View */,
+				ACEC6A1322F8FF0300D95B9C /* Controller */,
+			);
+			path = AddNewAccount;
+			sourceTree = "<group>";
+		};
+		ACEC6A1322F8FF0300D95B9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACEC6A1C22F8FF6400D95B9C /* ANAController.swift */,
+				ACEC6A1E22F8FF7000D95B9C /* ANAControllerDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ACEC6A1422F8FF0500D95B9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACEC6A1622F8FF3C00D95B9C /* ANAView.swift */,
+				ACEC6A1A22F8FF5A00D95B9C /* ANAViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACEC6A1522F8FF0700D95B9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACEC6A2022F8FF8500D95B9C /* ANAModel.swift */,
+				ACEC6A2222F8FF8F00D95B9C /* ANAModelDelegate.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,18 +322,24 @@
 			files = (
 				AC29ED7B22F89ED90096947F /* LOPControllerDelegate.swift in Sources */,
 				AC29ED9C22F8D6EB0096947F /* EncryptionButView.swift in Sources */,
+				ACEC6A2122F8FF8500D95B9C /* ANAModel.swift in Sources */,
 				AC29ED7722F89EB50096947F /* LOPModel.swift in Sources */,
+				ACEC6A1722F8FF3C00D95B9C /* ANAView.swift in Sources */,
 				AC29ED7D22F89EE50096947F /* LOPModelDelegate.swift in Sources */,
 				AC29ED8722F8A59B0096947F /* RoundedCornersView.swift in Sources */,
 				AC29ED8B22F8B02B0096947F /* KeychainService.swift in Sources */,
 				AC29ED8D22F8B03B0096947F /* AccountsListService.swift in Sources */,
 				AC45C17C22F886C100E242A0 /* SliderView.swift in Sources */,
 				AC29ED9E22F8DDFF0096947F /* ViewUnderTextFields.swift in Sources */,
+				ACEC6A1D22F8FF6400D95B9C /* ANAController.swift in Sources */,
 				AC29ED7222F89E720096947F /* LOPTableVIewDelegate.swift in Sources */,
 				AC29ED7F22F89EF00096947F /* LOPViewDelegate.swift in Sources */,
 				AC29ED7522F89EA70096947F /* LOPController.swift in Sources */,
+				ACEC6A1F22F8FF7000D95B9C /* ANAControllerDelegate.swift in Sources */,
 				AC29ED9722F8B52E0096947F /* AccountCell.swift in Sources */,
 				AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */,
+				ACEC6A1B22F8FF5A00D95B9C /* ANAViewDelegate.swift in Sources */,
+				ACEC6A2322F8FF8F00D95B9C /* ANAModelDelegate.swift in Sources */,
 				AC29ED8522F8A1890096947F /* LOPView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
