@@ -19,4 +19,13 @@ class LOPModel: LOPModelDelegate {
     
     
     private var controller: LOPControllerDelegate!
+    
+    
+    func getTitles() -> [String] {
+        let accounts = AccountListService.standard.accountList
+        let titles = accounts.map { (titleLogin) -> String in
+            return titleLogin[0]
+        }
+        return titles
+    }
 }

@@ -26,11 +26,12 @@ class LOPController: LOPControllerDelegate {
     func viewDidLoad() {
         view.makeNavBarTranslucent()
         addObservers()
-        view.updateData(accountList: AccountListService.standard.accountList)
+        
+        view.updateData(accountList: model.getTitles())
     }
     
     func viewDidAppear() {
-        view.updateData(accountList: AccountListService.standard.accountList)
+        view.updateData(accountList: model.getTitles())
         print(AccountListService.standard.accountList)
     }
     

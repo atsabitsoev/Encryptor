@@ -11,13 +11,13 @@ import UIKit
 class LOPView: UIViewController, LOPViewDelegate {
     
     
+    
     private var controller: LOPControllerDelegate!
     
     
     @IBOutlet weak var tableView: UITableView!
     
     
-    var accountList: [String: String]!
     var masTitles: [String] = []
     
     
@@ -40,24 +40,14 @@ class LOPView: UIViewController, LOPViewDelegate {
     }
     
     
-    private func setNewLists() {
-        
-        for i in accountList {
-            masTitles.append(i.key)
-        }
-    }
-    
-    
     func makeNavBarTranslucent() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
     }
     
-    func updateData(accountList: [String: String]) {
-        self.accountList = accountList
-        masTitles = []
-        setNewLists()
+    func updateData(accountList: [String]) {
+        self.masTitles = accountList
         tableView.reloadData()
     }
     

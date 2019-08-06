@@ -16,9 +16,9 @@ class AccountListService {
     static let standard = AccountListService()
     
     
-    var accountList: [String: String] {
+    var accountList: [[String]] {
         get {
-            return (UserDefaults.standard.object(forKey: "accountList") as? [String : String]) ?? [:]
+            return (UserDefaults.standard.object(forKey: "accountList") as? [[String]]) ?? []
         }
         set {
             UserDefaults.standard.set(newValue, forKey: "accountList")

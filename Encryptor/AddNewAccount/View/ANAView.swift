@@ -52,6 +52,16 @@ class ANAView: UIViewController, ANAViewDelegate {
         self.view.isUserInteractionEnabled = true
     }
     
+    func addRecognizer() {
+        let rec = UITapGestureRecognizer(target: self,
+                                         action: #selector(hideKeyboard))
+        self.view.addGestureRecognizer(rec)
+    }
+    
+    @objc internal func hideKeyboard() {
+        self.view.endEditing(true)
+    }
+    
     func goToRootVC() {
         self.navigationController?.popToRootViewController(animated: true)
     }
