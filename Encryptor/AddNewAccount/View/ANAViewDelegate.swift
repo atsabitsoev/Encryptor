@@ -12,7 +12,9 @@ import Foundation
 protocol ANAViewDelegate {
     
     func setTextFields()
+    func showLabSuccess()
     func addActionsToButEncrypt(tapAction: @escaping () -> (),
+                                readyAction: @escaping () -> (),
                                 finishAction: @escaping () -> ())
     func getAccount() -> [String]
     func addRecognizer()

@@ -13,9 +13,6 @@
         <array key="SF-Pro-Rounded-Bold.otf">
             <string>SFProRounded-Bold</string>
         </array>
-        <array key="SF-Pro-Rounded-Medium.otf">
-            <string>SFProRounded-Medium</string>
-        </array>
         <array key="SF-Pro-Rounded-Regular.otf">
             <string>SFProRounded-Regular</string>
         </array>
@@ -137,27 +134,34 @@
                                             <constraint firstAttribute="bottom" secondItem="Azx-yh-eBZ" secondAttribute="bottom" constant="10" id="hS9-MC-8HJ"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2WO-db-Hd9">
-                                        <rect key="frame" x="40" y="247.5" width="334" height="38"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2WO-db-Hd9">
+                                        <rect key="frame" x="40" y="156" width="334" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="D4u-jm-wgc"/>
                                         </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="SFProRounded-Medium" family="SF Pro Rounded" pointSize="36"/>
+                                        <color key="textColor" red="1" green="0.81568627449999997" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="36"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                     </textField>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0g-6v-X5H">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="261.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="7Yf-at-GgS" firstAttribute="top" secondItem="z6O-tc-HCD" secondAttribute="bottom" constant="10" id="0kZ-rD-J4U"/>
                                     <constraint firstItem="7Yf-at-GgS" firstAttribute="leading" secondItem="0ua-Vt-20h" secondAttribute="leading" id="3HK-IQ-f0R"/>
+                                    <constraint firstItem="2WO-db-Hd9" firstAttribute="centerY" secondItem="T0g-6v-X5H" secondAttribute="centerY" id="40Y-1J-nQt"/>
+                                    <constraint firstItem="z6O-tc-HCD" firstAttribute="top" secondItem="T0g-6v-X5H" secondAttribute="bottom" id="DW1-4H-E65"/>
                                     <constraint firstItem="2WO-db-Hd9" firstAttribute="leading" secondItem="z6O-tc-HCD" secondAttribute="leading" id="HC8-xd-sbR"/>
+                                    <constraint firstAttribute="trailing" secondItem="T0g-6v-X5H" secondAttribute="trailing" id="Hw3-DS-416"/>
                                     <constraint firstItem="2WO-db-Hd9" firstAttribute="trailing" secondItem="z6O-tc-HCD" secondAttribute="trailing" id="ace-CG-mGX"/>
                                     <constraint firstAttribute="trailing" secondItem="7Yf-at-GgS" secondAttribute="trailing" id="jKS-rL-cDo"/>
                                     <constraint firstItem="z6O-tc-HCD" firstAttribute="centerX" secondItem="0ua-Vt-20h" secondAttribute="centerX" id="mkd-8d-arS"/>
                                     <constraint firstItem="z6O-tc-HCD" firstAttribute="centerY" secondItem="0ua-Vt-20h" secondAttribute="centerY" id="pXx-0Q-6Xt"/>
+                                    <constraint firstItem="T0g-6v-X5H" firstAttribute="leading" secondItem="0ua-Vt-20h" secondAttribute="leading" id="qXj-gO-gzb"/>
                                     <constraint firstItem="z6O-tc-HCD" firstAttribute="leading" secondItem="0ua-Vt-20h" secondAttribute="leading" constant="40" id="xcA-zs-RFL"/>
-                                    <constraint firstItem="z6O-tc-HCD" firstAttribute="top" secondItem="2WO-db-Hd9" secondAttribute="bottom" constant="20" id="yzK-wy-Y9E"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="downLeft" value="YES"/>
@@ -176,15 +180,26 @@
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="24"/>
                                 <state key="normal" title="Encrypt"/>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzR-cj-EHz">
+                                <rect key="frame" x="0.0" y="695.5" width="414" height="166.5"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803920000006" green="0.058823529409999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="nz7-Xm-1Ej" firstAttribute="trailing" secondItem="fzR-cj-EHz" secondAttribute="trailing" id="3Vz-n2-1UP"/>
                             <constraint firstItem="0ua-Vt-20h" firstAttribute="height" secondItem="jtB-rC-aSB" secondAttribute="height" multiplier="594:812" id="9UF-bS-wnW"/>
+                            <constraint firstItem="fzR-cj-EHz" firstAttribute="top" secondItem="S9P-jw-neg" secondAttribute="bottom" id="JzK-RS-vxE"/>
                             <constraint firstItem="0ua-Vt-20h" firstAttribute="leading" secondItem="nz7-Xm-1Ej" secondAttribute="leading" id="LIM-aa-rtO"/>
                             <constraint firstItem="S9P-jw-neg" firstAttribute="width" secondItem="0ua-Vt-20h" secondAttribute="width" multiplier="1:2" id="Q69-V8-P29"/>
                             <constraint firstItem="S9P-jw-neg" firstAttribute="centerX" secondItem="jtB-rC-aSB" secondAttribute="centerX" id="Wz4-s2-XWn"/>
                             <constraint firstItem="0ua-Vt-20h" firstAttribute="width" secondItem="jtB-rC-aSB" secondAttribute="width" id="hjA-ZG-zVI"/>
                             <constraint firstItem="0ua-Vt-20h" firstAttribute="top" secondItem="jtB-rC-aSB" secondAttribute="top" id="ho2-GI-WWJ"/>
+                            <constraint firstItem="nz7-Xm-1Ej" firstAttribute="bottom" secondItem="fzR-cj-EHz" secondAttribute="bottom" id="sha-ec-Iju"/>
+                            <constraint firstItem="fzR-cj-EHz" firstAttribute="leading" secondItem="nz7-Xm-1Ej" secondAttribute="leading" id="uGC-jk-P0p"/>
+                            <constraint firstItem="T0g-6v-X5H" firstAttribute="top" secondItem="nz7-Xm-1Ej" secondAttribute="top" id="xX8-k1-5E1"/>
                             <constraint firstItem="S9P-jw-neg" firstAttribute="bottom" secondItem="0ua-Vt-20h" secondAttribute="bottom" constant="40" id="zDF-5X-xyE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nz7-Xm-1Ej"/>
@@ -192,6 +207,7 @@
                     <navigationItem key="navigationItem" title="New account" id="RdB-e3-SKc"/>
                     <connections>
                         <outlet property="butEncrypt" destination="S9P-jw-neg" id="nKM-NH-VSZ"/>
+                        <outlet property="labSuccess" destination="fzR-cj-EHz" id="DP4-1b-b0a"/>
                         <outlet property="tfLogin" destination="8zi-RO-f3L" id="VK8-5L-oOn"/>
                         <outlet property="tfPassword" destination="oIN-si-sVW" id="xon-Gc-KV6"/>
                         <outlet property="tfTitle" destination="2WO-db-Hd9" id="U1A-eY-TTZ"/>

@@ -125,7 +125,7 @@ class ShowingAccountView: UIViewController, ShowingAccountViewDelegate {
         }
         
         let butEyeImageName = passwordIsVisible ? "EyeClosed" : "Eye"
-        butEye.setImage(UIImage(named: butEyeImageName),
+        butEye.setImage(UIImage(named: butEyeImageName)?.withRenderingMode(.alwaysTemplate),
                         for: .normal)
         
     }

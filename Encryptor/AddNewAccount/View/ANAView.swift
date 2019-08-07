@@ -18,6 +18,7 @@ class ANAView: UIViewController, ANAViewDelegate {
     @IBOutlet weak var tfLogin: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var butEncrypt: EncryptionButView!
+    @IBOutlet weak var labSuccess: UILabel!
     
     
     override func viewDidLoad() {
@@ -44,9 +45,15 @@ class ANAView: UIViewController, ANAViewDelegate {
     
     
     func addActionsToButEncrypt(tapAction: @escaping () -> (),
+                                readyAction: @escaping () -> (),
                                 finishAction: @escaping () -> ()) {
         butEncrypt.actionEncrypt = tapAction
+        butEncrypt.readyAction = readyAction
         butEncrypt.actionOnFinish = finishAction
+    }
+    
+    func showLabSuccess() {
+        labSuccess.isHidden = false
     }
     
     func getAccount() -> [String] {

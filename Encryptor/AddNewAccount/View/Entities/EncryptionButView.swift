@@ -78,6 +78,7 @@ class EncryptionButView: UIButton {
     
     
     var actionEncrypt: () -> () = {}
+    var readyAction: () -> () = {}
     var actionOnFinish: () -> () = {}
     
     
@@ -121,6 +122,7 @@ class EncryptionButView: UIButton {
     
     private func stateChangedToReady() {
         imageViewRotating.image = #imageLiteral(resourceName: "Щит")
+        readyAction()
         Timer.scheduledTimer(withTimeInterval: 1,
                              repeats: false) { (_ ) in
                                 self.actionOnFinish()

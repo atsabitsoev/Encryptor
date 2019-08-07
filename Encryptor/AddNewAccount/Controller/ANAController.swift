@@ -20,6 +20,7 @@ class ANAController: ANAControllerDelegate {
     
     func viewDidLoad() {
         view.addActionsToButEncrypt(tapAction: tapAction,
+                                    readyAction: readyAction,
                                     finishAction: finishAction)
         view.setTextFields()
         view.addRecognizer()
@@ -30,6 +31,10 @@ class ANAController: ANAControllerDelegate {
         view.stopUserInteractions()
         let account = view.getAccount()
         model.saveAccount(title: account[0], login: account[1], password: account[2])
+    }
+    
+    private func readyAction() {
+        view.showLabSuccess()
     }
     
     private func finishAction() {

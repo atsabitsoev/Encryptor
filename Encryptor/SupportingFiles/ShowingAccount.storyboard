@@ -82,11 +82,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT1-xm-DLi">
-                                <rect key="frame" x="187" y="356" width="40" height="40"/>
+                                <rect key="frame" x="350" y="356" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="SF2-cL-fCy"/>
                                     <constraint firstAttribute="width" constant="40" id="iiw-jL-wvn"/>
                                 </constraints>
+                                <color key="tintColor" red="0.65098039215686276" green="0.52156862745098043" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="Eye"/>
                                 <connections>
                                     <action selector="butEyeTapped:" destination="Bdx-KQ-rq2" eventType="touchUpInside" id="F2N-y1-zvo"/>
@@ -137,7 +138,6 @@
                             <constraint firstItem="UhF-0r-VAB" firstAttribute="leading" secondItem="zwJ-8C-IQC" secondAttribute="leading" constant="24" id="1CQ-36-XaA"/>
                             <constraint firstItem="9Bb-il-2j0" firstAttribute="height" secondItem="Icn-h8-0F8" secondAttribute="height" multiplier="1:4" id="1Ct-VM-Wg6"/>
                             <constraint firstItem="zwJ-8C-IQC" firstAttribute="trailing" secondItem="UhF-0r-VAB" secondAttribute="trailing" constant="24" id="5Da-OI-REY"/>
-                            <constraint firstItem="hT1-xm-DLi" firstAttribute="centerX" secondItem="Icn-h8-0F8" secondAttribute="centerX" id="JoB-oY-K0R"/>
                             <constraint firstItem="2Fb-zK-cbz" firstAttribute="trailing" secondItem="zwJ-8C-IQC" secondAttribute="trailing" id="LBh-qr-YXH"/>
                             <constraint firstItem="2Fb-zK-cbz" firstAttribute="top" secondItem="Icn-h8-0F8" secondAttribute="top" id="M6v-h6-3mt"/>
                             <constraint firstAttribute="bottom" secondItem="2Fb-zK-cbz" secondAttribute="bottom" id="P9W-fC-yxP"/>
@@ -145,6 +145,7 @@
                             <constraint firstItem="2Fb-zK-cbz" firstAttribute="leading" secondItem="zwJ-8C-IQC" secondAttribute="leading" id="csM-Gs-Cfl"/>
                             <constraint firstItem="UhF-0r-VAB" firstAttribute="top" secondItem="hT1-xm-DLi" secondAttribute="bottom" constant="20" id="khQ-Cz-bdW"/>
                             <constraint firstItem="hT1-xm-DLi" firstAttribute="top" secondItem="9Bb-il-2j0" secondAttribute="bottom" constant="20" id="qNY-f3-TRt"/>
+                            <constraint firstItem="hT1-xm-DLi" firstAttribute="trailing" secondItem="9Bb-il-2j0" secondAttribute="trailing" id="uE4-sK-Viu"/>
                             <constraint firstItem="9Bb-il-2j0" firstAttribute="leading" secondItem="zwJ-8C-IQC" secondAttribute="leading" constant="24" id="vUT-ip-QIb"/>
                             <constraint firstItem="UhF-0r-VAB" firstAttribute="bottom" secondItem="zwJ-8C-IQC" secondAttribute="bottom" constant="24" id="vsD-1c-bMA"/>
                             <constraint firstItem="zwJ-8C-IQC" firstAttribute="trailing" secondItem="9Bb-il-2j0" secondAttribute="trailing" constant="24" id="xc4-Jv-Tkg"/>
@@ -153,7 +154,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Qia-fL-wjo">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="vup-Wl-W78">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="butDeleteTapped:" destination="Bdx-KQ-rq2" id="ICs-Hm-dwC"/>
                             </connections>
