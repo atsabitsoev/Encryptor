@@ -31,6 +31,13 @@
 		AC671B6322F8864800207A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6222F8864800207A1B /* Assets.xcassets */; };
 		AC671B6622F8864800207A1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6422F8864800207A1B /* LaunchScreen.storyboard */; };
 		ACBC6D6322FB1CEF00030A76 /* ANATFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D6222FB1CEF00030A76 /* ANATFDelegate.swift */; };
+		ACBC6D6522FB270600030A76 /* PIN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBC6D6422FB270600030A76 /* PIN.storyboard */; };
+		ACBC6D6B22FB3C9600030A76 /* PINView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D6A22FB3C9600030A76 /* PINView.swift */; };
+		ACBC6D6D22FB3CA100030A76 /* PINViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D6C22FB3CA100030A76 /* PINViewDelegate.swift */; };
+		ACBC6D6F22FB3CB600030A76 /* PINController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D6E22FB3CB600030A76 /* PINController.swift */; };
+		ACBC6D7122FB3CC100030A76 /* PINControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D7022FB3CC100030A76 /* PINControllerDelegate.swift */; };
+		ACBC6D7322FB3CCA00030A76 /* PINModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D7222FB3CCA00030A76 /* PINModel.swift */; };
+		ACBC6D7722FB3CE000030A76 /* PINModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D7622FB3CE000030A76 /* PINModelDelegate.swift */; };
 		ACD51D2A22FA4AA0005DEAD0 /* ShowingAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD51D2922FA4AA0005DEAD0 /* ShowingAccount.storyboard */; };
 		ACD51D3022FA506E005DEAD0 /* ShowingAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD51D2F22FA506E005DEAD0 /* ShowingAccountView.swift */; };
 		ACD51D3222FA5081005DEAD0 /* ShowingAccountViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD51D3122FA5081005DEAD0 /* ShowingAccountViewDelegate.swift */; };
@@ -74,6 +81,13 @@
 		AC671B6522F8864800207A1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC671B6722F8864800207A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACBC6D6222FB1CEF00030A76 /* ANATFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANATFDelegate.swift; sourceTree = "<group>"; };
+		ACBC6D6422FB270600030A76 /* PIN.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PIN.storyboard; sourceTree = "<group>"; };
+		ACBC6D6A22FB3C9600030A76 /* PINView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINView.swift; sourceTree = "<group>"; };
+		ACBC6D6C22FB3CA100030A76 /* PINViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINViewDelegate.swift; sourceTree = "<group>"; };
+		ACBC6D6E22FB3CB600030A76 /* PINController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINController.swift; sourceTree = "<group>"; };
+		ACBC6D7022FB3CC100030A76 /* PINControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINControllerDelegate.swift; sourceTree = "<group>"; };
+		ACBC6D7222FB3CCA00030A76 /* PINModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINModel.swift; sourceTree = "<group>"; };
+		ACBC6D7622FB3CE000030A76 /* PINModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINModelDelegate.swift; sourceTree = "<group>"; };
 		ACD51D2922FA4AA0005DEAD0 /* ShowingAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowingAccount.storyboard; sourceTree = "<group>"; };
 		ACD51D2F22FA506E005DEAD0 /* ShowingAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingAccountView.swift; sourceTree = "<group>"; };
 		ACD51D3122FA5081005DEAD0 /* ShowingAccountViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingAccountViewDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +177,7 @@
 				AC29ED8222F8A07F0096947F /* ListOfPasswords.storyboard */,
 				AC29ED9822F8D6250096947F /* CreationAccount.storyboard */,
 				ACD51D2922FA4AA0005DEAD0 /* ShowingAccount.storyboard */,
+				ACBC6D6422FB270600030A76 /* PIN.storyboard */,
 				AC671B5B22F8864500207A1B /* AppDelegate.swift */,
 				AC671B6222F8864800207A1B /* Assets.xcassets */,
 				AC671B6422F8864800207A1B /* LaunchScreen.storyboard */,
@@ -232,11 +247,49 @@
 				AC29ED6822F89D7C0096947F /* ListOfPasswords */,
 				ACEC6A1222F8FEEE00D95B9C /* AddNewAccount */,
 				ACD51D2B22FA5045005DEAD0 /* ShowingAccount */,
+				ACBC6D6622FB3C7100030A76 /* PIN */,
 				AC29ED8122F8A0580096947F /* SupportingFiles */,
 				AC671B6722F8864800207A1B /* Info.plist */,
 				AC29ED8E22F8B2250096947F /* Шрифты */,
 			);
 			path = Encryptor;
+			sourceTree = "<group>";
+		};
+		ACBC6D6622FB3C7100030A76 /* PIN */ = {
+			isa = PBXGroup;
+			children = (
+				ACBC6D6922FB3C8600030A76 /* Controller */,
+				ACBC6D6822FB3C8200030A76 /* View */,
+				ACBC6D6722FB3C7800030A76 /* Model */,
+			);
+			path = PIN;
+			sourceTree = "<group>";
+		};
+		ACBC6D6722FB3C7800030A76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACBC6D7222FB3CCA00030A76 /* PINModel.swift */,
+				ACBC6D7622FB3CE000030A76 /* PINModelDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACBC6D6822FB3C8200030A76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACBC6D6A22FB3C9600030A76 /* PINView.swift */,
+				ACBC6D6C22FB3CA100030A76 /* PINViewDelegate.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACBC6D6922FB3C8600030A76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACBC6D6E22FB3CB600030A76 /* PINController.swift */,
+				ACBC6D7022FB3CC100030A76 /* PINControllerDelegate.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		ACD51D2B22FA5045005DEAD0 /* ShowingAccount */ = {
@@ -395,6 +448,7 @@
 			files = (
 				AC671B6622F8864800207A1B /* LaunchScreen.storyboard in Resources */,
 				AC29ED9322F8B23F0096947F /* SF-Pro-Rounded-Medium.otf in Resources */,
+				ACBC6D6522FB270600030A76 /* PIN.storyboard in Resources */,
 				AC29ED9222F8B23F0096947F /* SF-Pro-Rounded-Regular.otf in Resources */,
 				AC29ED9422F8B23F0096947F /* SF-Pro-Rounded-Bold.otf in Resources */,
 				ACD51D2A22FA4AA0005DEAD0 /* ShowingAccount.storyboard in Resources */,
@@ -477,12 +531,18 @@
 				ACEC6A1D22F8FF6400D95B9C /* ANAController.swift in Sources */,
 				AC29ED7222F89E720096947F /* LOPTableVIewDelegate.swift in Sources */,
 				AC29ED7F22F89EF00096947F /* LOPViewDelegate.swift in Sources */,
+				ACBC6D7322FB3CCA00030A76 /* PINModel.swift in Sources */,
 				ACD51D3C22FA50FA005DEAD0 /* ShowingAccountControllerDelegate.swift in Sources */,
 				AC29ED7522F89EA70096947F /* LOPController.swift in Sources */,
+				ACBC6D6D22FB3CA100030A76 /* PINViewDelegate.swift in Sources */,
 				ACEC6A1F22F8FF7000D95B9C /* ANAControllerDelegate.swift in Sources */,
 				AC29ED9722F8B52E0096947F /* AccountCell.swift in Sources */,
+				ACBC6D6B22FB3C9600030A76 /* PINView.swift in Sources */,
+				ACBC6D6F22FB3CB600030A76 /* PINController.swift in Sources */,
 				AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */,
+				ACBC6D7722FB3CE000030A76 /* PINModelDelegate.swift in Sources */,
 				ACEC6A1B22F8FF5A00D95B9C /* ANAViewDelegate.swift in Sources */,
+				ACBC6D7122FB3CC100030A76 /* PINControllerDelegate.swift in Sources */,
 				ACEC6A2322F8FF8F00D95B9C /* ANAModelDelegate.swift in Sources */,
 				AC29ED8522F8A1890096947F /* LOPView.swift in Sources */,
 				ACBC6D6322FB1CEF00030A76 /* ANATFDelegate.swift in Sources */,

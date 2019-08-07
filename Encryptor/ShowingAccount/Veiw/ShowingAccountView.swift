@@ -66,6 +66,8 @@ class ShowingAccountView: UIViewController, ShowingAccountViewDelegate {
         butLogin.setTitle(login, for: .normal)
         butPassword.setTitle(passwordIsVisible ? password : makeSecret(password),
                              for: .normal)
+        butEye.setImage(butEye.image(for: .normal)?.withRenderingMode(.alwaysTemplate),
+                        for: .normal)
     }
     
     
@@ -124,10 +126,14 @@ class ShowingAccountView: UIViewController, ShowingAccountViewDelegate {
             butPassword.setTitle(secretPassword, for: .normal)
         }
         
+        changeButEyeImage()
+        
+    }
+    
+    private func changeButEyeImage() {
         let butEyeImageName = passwordIsVisible ? "EyeClosed" : "Eye"
         butEye.setImage(UIImage(named: butEyeImageName)?.withRenderingMode(.alwaysTemplate),
                         for: .normal)
-        
     }
     
     
