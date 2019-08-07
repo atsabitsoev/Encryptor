@@ -15,5 +15,6 @@ protocol ShowingAccountControllerDelegate {
     func viewDidLoad()
     func butCopyLoginTapped(login: String)
     func butCopyPasswordTapped(password: String)
+    func butEyeTapped()
     func butDeleteTapped()
 }

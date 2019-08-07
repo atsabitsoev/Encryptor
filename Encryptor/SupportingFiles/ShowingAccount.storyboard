@@ -76,11 +76,22 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap data to copy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="UhF-0r-VAB">
-                                <rect key="frame" x="24" y="357" width="366" height="529"/>
+                                <rect key="frame" x="24" y="416" width="366" height="470"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="70"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hT1-xm-DLi">
+                                <rect key="frame" x="187" y="356" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SF2-cL-fCy"/>
+                                    <constraint firstAttribute="width" constant="40" id="iiw-jL-wvn"/>
+                                </constraints>
+                                <state key="normal" image="Eye"/>
+                                <connections>
+                                    <action selector="butEyeTapped:" destination="Bdx-KQ-rq2" eventType="touchUpInside" id="F2N-y1-zvo"/>
+                                </connections>
+                            </button>
                             <visualEffectView hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-zK-cbz">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sRa-mo-RcW">
@@ -126,12 +137,14 @@
                             <constraint firstItem="UhF-0r-VAB" firstAttribute="leading" secondItem="zwJ-8C-IQC" secondAttribute="leading" constant="24" id="1CQ-36-XaA"/>
                             <constraint firstItem="9Bb-il-2j0" firstAttribute="height" secondItem="Icn-h8-0F8" secondAttribute="height" multiplier="1:4" id="1Ct-VM-Wg6"/>
                             <constraint firstItem="zwJ-8C-IQC" firstAttribute="trailing" secondItem="UhF-0r-VAB" secondAttribute="trailing" constant="24" id="5Da-OI-REY"/>
+                            <constraint firstItem="hT1-xm-DLi" firstAttribute="centerX" secondItem="Icn-h8-0F8" secondAttribute="centerX" id="JoB-oY-K0R"/>
                             <constraint firstItem="2Fb-zK-cbz" firstAttribute="trailing" secondItem="zwJ-8C-IQC" secondAttribute="trailing" id="LBh-qr-YXH"/>
                             <constraint firstItem="2Fb-zK-cbz" firstAttribute="top" secondItem="Icn-h8-0F8" secondAttribute="top" id="M6v-h6-3mt"/>
                             <constraint firstAttribute="bottom" secondItem="2Fb-zK-cbz" secondAttribute="bottom" id="P9W-fC-yxP"/>
                             <constraint firstItem="9Bb-il-2j0" firstAttribute="top" secondItem="zwJ-8C-IQC" secondAttribute="top" constant="68" id="TEU-p2-Tog"/>
                             <constraint firstItem="2Fb-zK-cbz" firstAttribute="leading" secondItem="zwJ-8C-IQC" secondAttribute="leading" id="csM-Gs-Cfl"/>
-                            <constraint firstItem="UhF-0r-VAB" firstAttribute="top" secondItem="9Bb-il-2j0" secondAttribute="bottom" constant="21" id="v6v-7R-yNa"/>
+                            <constraint firstItem="UhF-0r-VAB" firstAttribute="top" secondItem="hT1-xm-DLi" secondAttribute="bottom" constant="20" id="khQ-Cz-bdW"/>
+                            <constraint firstItem="hT1-xm-DLi" firstAttribute="top" secondItem="9Bb-il-2j0" secondAttribute="bottom" constant="20" id="qNY-f3-TRt"/>
                             <constraint firstItem="9Bb-il-2j0" firstAttribute="leading" secondItem="zwJ-8C-IQC" secondAttribute="leading" constant="24" id="vUT-ip-QIb"/>
                             <constraint firstItem="UhF-0r-VAB" firstAttribute="bottom" secondItem="zwJ-8C-IQC" secondAttribute="bottom" constant="24" id="vsD-1c-bMA"/>
                             <constraint firstItem="zwJ-8C-IQC" firstAttribute="trailing" secondItem="9Bb-il-2j0" secondAttribute="trailing" constant="24" id="xc4-Jv-Tkg"/>
@@ -160,4 +173,7 @@
             <point key="canvasLocation" x="0.0" y="62.946428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Eye" width="512" height="512"/>
+    </resources>
 </document>

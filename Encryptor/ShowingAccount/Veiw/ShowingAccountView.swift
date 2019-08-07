@@ -30,6 +30,7 @@ class ShowingAccountView: UIViewController, ShowingAccountViewDelegate {
     
     
     var row: Int! = 0
+    var passwordIsVisible = false
     
 
     override func viewDidLoad() {
@@ -62,7 +63,8 @@ class ShowingAccountView: UIViewController, ShowingAccountViewDelegate {
     func setDefaultUI() {
         self.navigationItem.title = titleText
         butLogin.setTitle(login, for: .normal)
-        butPassword.setTitle(password, for: .normal)
+        butPassword.setTitle(passwordIsVisible ? password : makeSecret(password),
+                             for: .normal)
     }
     
     
@@ -101,6 +103,26 @@ class ShowingAccountView: UIViewController, ShowingAccountViewDelegate {
     }
     
     
+    private func makeSecret(_ string: String) -> String {
+        var secretString = ""
+        for _ in string {
+            secretString.append("*")
+        }
+        return secretString
+    }
+    
+    
+    func changePasswordVisibility() {
+        if passwordIsVisible {
+            let secretPassword = makeSecret(password)
+            butPassword.setTitle(secretPassword, for: .normal)
+        } else {
+            butPassword.setTitle(password, for: .normal)
+        }
+        passwordIsVisible = !passwordIsVisible
+    }
+    
+    
     func goToRoot() {
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -112,6 +134,10 @@ class ShowingAccountView: UIViewController, ShowingAccountViewDelegate {
     
     @IBAction func butPasswordTapped(_ sender: UIButton) {
         controller.butCopyPasswordTapped(password: self.password)
+    }
+    
+    @IBAction func butEyeTapped(_ sender: UIButton) {
+        controller.butEyeTapped()
     }
     
     @IBAction func butDeleteTapped(_ sender: UIBarButtonItem) {

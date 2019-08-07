@@ -33,6 +33,16 @@ class ANAView: UIViewController, ANAViewDelegate {
     }
     
     
+    func setTextFields() {
+        tfTitle.tag = 0
+        tfLogin.tag = 1
+        tfPassword.tag = 2
+        tfTitle.delegate = self
+        tfLogin.delegate = self
+        tfPassword.delegate = self
+    }
+    
+    
     func addActionsToButEncrypt(tapAction: @escaping () -> (),
                                 finishAction: @escaping () -> ()) {
         butEncrypt.actionEncrypt = tapAction

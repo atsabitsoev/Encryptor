@@ -11,6 +11,7 @@ import Foundation
 
 protocol ANAViewDelegate {
     
+    func setTextFields()
     func addActionsToButEncrypt(tapAction: @escaping () -> (),
                                 finishAction: @escaping () -> ())
     func getAccount() -> [String]

@@ -42,6 +42,10 @@ class ShowingAccountController: ShowingAccountControllerDelegate {
         view.showSuccessAlertPassword()
     }
     
+    func butEyeTapped() {
+        view.changePasswordVisibility()
+    }
+    
     func butDeleteTapped() {
         model.deleteAccountData()
         view.goToRoot()

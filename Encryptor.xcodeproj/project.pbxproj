@@ -30,6 +30,7 @@
 		AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671B5B22F8864500207A1B /* AppDelegate.swift */; };
 		AC671B6322F8864800207A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6222F8864800207A1B /* Assets.xcassets */; };
 		AC671B6622F8864800207A1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6422F8864800207A1B /* LaunchScreen.storyboard */; };
+		ACBC6D6322FB1CEF00030A76 /* ANATFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D6222FB1CEF00030A76 /* ANATFDelegate.swift */; };
 		ACD51D2A22FA4AA0005DEAD0 /* ShowingAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACD51D2922FA4AA0005DEAD0 /* ShowingAccount.storyboard */; };
 		ACD51D3022FA506E005DEAD0 /* ShowingAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD51D2F22FA506E005DEAD0 /* ShowingAccountView.swift */; };
 		ACD51D3222FA5081005DEAD0 /* ShowingAccountViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD51D3122FA5081005DEAD0 /* ShowingAccountViewDelegate.swift */; };
@@ -72,6 +73,7 @@
 		AC671B6222F8864800207A1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC671B6522F8864800207A1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC671B6722F8864800207A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACBC6D6222FB1CEF00030A76 /* ANATFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANATFDelegate.swift; sourceTree = "<group>"; };
 		ACD51D2922FA4AA0005DEAD0 /* ShowingAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShowingAccount.storyboard; sourceTree = "<group>"; };
 		ACD51D2F22FA506E005DEAD0 /* ShowingAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingAccountView.swift; sourceTree = "<group>"; };
 		ACD51D3122FA5081005DEAD0 /* ShowingAccountViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingAccountViewDelegate.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 			children = (
 				ACEC6A1622F8FF3C00D95B9C /* ANAView.swift */,
 				ACEC6A1A22F8FF5A00D95B9C /* ANAViewDelegate.swift */,
+				ACBC6D6222FB1CEF00030A76 /* ANATFDelegate.swift */,
 				ACEC6A2422F9013A00D95B9C /* Entities */,
 			);
 			path = View;
@@ -482,6 +485,7 @@
 				ACEC6A1B22F8FF5A00D95B9C /* ANAViewDelegate.swift in Sources */,
 				ACEC6A2322F8FF8F00D95B9C /* ANAModelDelegate.swift in Sources */,
 				AC29ED8522F8A1890096947F /* LOPView.swift in Sources */,
+				ACBC6D6322FB1CEF00030A76 /* ANATFDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

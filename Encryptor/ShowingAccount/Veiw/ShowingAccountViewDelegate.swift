@@ -18,4 +18,5 @@ protocol ShowingAccountViewDelegate {
     func showSuccessAlertLogin()
     func showSuccessAlertPassword()
     func goToRoot()
+    func changePasswordVisibility()
 }

@@ -21,6 +21,8 @@ class ANAController: ANAControllerDelegate {
     func viewDidLoad() {
         view.addActionsToButEncrypt(tapAction: tapAction,
                                     finishAction: finishAction)
+        view.setTextFields()
+        view.addRecognizer()
     }
     
     
