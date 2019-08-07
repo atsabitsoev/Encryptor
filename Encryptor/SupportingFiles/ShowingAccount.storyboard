@@ -161,6 +161,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="blurEffect" destination="2Fb-zK-cbz" id="icQ-ig-dA8"/>
+                        <outlet property="butEye" destination="hT1-xm-DLi" id="s6a-XX-189"/>
                         <outlet property="butLogin" destination="oCa-Q1-S7K" id="bWK-6m-vGh"/>
                         <outlet property="butPassword" destination="uEY-bU-NlK" id="uhq-ZP-dfK"/>
                         <outlet property="labCopied" destination="Hm5-lx-tCH" id="3Mw-qG-gUc"/>

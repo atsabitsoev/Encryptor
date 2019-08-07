@@ -21,6 +21,7 @@ class ShowingAccountView: UIViewController, ShowingAccountViewDelegate {
     @IBOutlet weak var butPassword: UIButton!
     @IBOutlet weak var blurEffect: UIVisualEffectView!
     @IBOutlet weak var labCopied: UILabel!
+    @IBOutlet weak var butEye: UIButton!
     
     
     
@@ -113,13 +114,20 @@ class ShowingAccountView: UIViewController, ShowingAccountViewDelegate {
     
     
     func changePasswordVisibility() {
+        
+        passwordIsVisible = !passwordIsVisible
+        
         if passwordIsVisible {
+            butPassword.setTitle(password, for: .normal)
+        } else {
             let secretPassword = makeSecret(password)
             butPassword.setTitle(secretPassword, for: .normal)
-        } else {
-            butPassword.setTitle(password, for: .normal)
         }
-        passwordIsVisible = !passwordIsVisible
+        
+        let butEyeImageName = passwordIsVisible ? "EyeClosed" : "Eye"
+        butEye.setImage(UIImage(named: butEyeImageName),
+                        for: .normal)
+        
     }
     
     
