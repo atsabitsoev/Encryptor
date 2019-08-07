@@ -15,4 +15,5 @@ protocol LOPViewDelegate {
     func makeNavBarTranslucent()
     @objc func stopScrolling()
     @objc func startScrolling()
+    func goToShowingAccountView(row: Int) -> ()
 }

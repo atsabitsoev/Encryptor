@@ -32,7 +32,7 @@ class LOPController: LOPControllerDelegate {
     
     func viewDidAppear() {
         view.updateData(accountList: model.getTitles())
-        print(AccountListService.standard.accountList)
+        print(AccountListService().accountList)
     }
     
     

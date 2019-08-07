@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bdx-KQ-rq2">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Bold.otf">
+            <string>SFProRounded-Bold</string>
+        </array>
+        <array key="SF-Pro-Rounded-Regular.otf">
+            <string>SFProRounded-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="Ob3-Tv-eeP">
+            <objects>
+                <viewController storyboardIdentifier="ShowingAccountView" id="Bdx-KQ-rq2" customClass="ShowingAccountView" customModule="Encryptor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Icn-h8-0F8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Bb-il-2j0">
+                                <rect key="frame" x="24" y="112" width="366" height="224"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfK-aY-kFL">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="101"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCa-Q1-S7K">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="101"/>
+                                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="24"/>
+                                                <state key="normal" title="+79284983000">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="butLoginTapped:" destination="Bdx-KQ-rq2" eventType="touchUpInside" id="C1j-Am-web"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.28235294119999998" green="0.20392156859999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="oCa-Q1-S7K" firstAttribute="top" secondItem="gfK-aY-kFL" secondAttribute="top" id="5CH-9F-Kvc"/>
+                                            <constraint firstAttribute="trailing" secondItem="oCa-Q1-S7K" secondAttribute="trailing" id="Tyd-LM-hCI"/>
+                                            <constraint firstAttribute="bottom" secondItem="oCa-Q1-S7K" secondAttribute="bottom" id="Zd7-hr-wDt"/>
+                                            <constraint firstItem="oCa-Q1-S7K" firstAttribute="leading" secondItem="gfK-aY-kFL" secondAttribute="leading" id="jiZ-rH-t32"/>
+                                        </constraints>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cff-gV-Me4">
+                                        <rect key="frame" x="0.0" y="123" width="366" height="101"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEY-bU-NlK">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="101"/>
+                                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="24"/>
+                                                <state key="normal" title="*************">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="butPasswordTapped:" destination="Bdx-KQ-rq2" eventType="touchUpInside" id="ifY-92-i6r"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.28235294119999998" green="0.20392156859999999" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="uEY-bU-NlK" secondAttribute="bottom" id="JWO-4p-uan"/>
+                                            <constraint firstAttribute="trailing" secondItem="uEY-bU-NlK" secondAttribute="trailing" id="L0x-cb-GQ8"/>
+                                            <constraint firstItem="uEY-bU-NlK" firstAttribute="top" secondItem="cff-gV-Me4" secondAttribute="top" id="YgE-Im-32E"/>
+                                            <constraint firstItem="uEY-bU-NlK" firstAttribute="leading" secondItem="cff-gV-Me4" secondAttribute="leading" id="Ywf-1d-AGf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap data to copy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="UhF-0r-VAB">
+                                <rect key="frame" x="24" y="357" width="366" height="529"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <visualEffectView hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-zK-cbz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sRa-mo-RcW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-Oi-YHk">
+                                            <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copied!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Hm5-lx-tCH">
+                                                    <rect key="frame" x="8" y="8" width="104" height="104"/>
+                                                    <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.7465063820422535" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Hm5-lx-tCH" firstAttribute="leading" secondItem="4aU-Oi-YHk" secondAttribute="leading" constant="8" id="9c4-7i-wmf"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hm5-lx-tCH" secondAttribute="trailing" constant="8" id="JvP-7Q-t8x"/>
+                                                <constraint firstAttribute="height" constant="120" id="QD8-pI-VvS"/>
+                                                <constraint firstItem="Hm5-lx-tCH" firstAttribute="top" secondItem="4aU-Oi-YHk" secondAttribute="top" constant="8" id="g1f-Zn-g6W"/>
+                                                <constraint firstAttribute="width" constant="120" id="gLj-yB-jEj"/>
+                                                <constraint firstAttribute="bottom" secondItem="Hm5-lx-tCH" secondAttribute="bottom" constant="8" id="uI5-gk-Hgu"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="4aU-Oi-YHk" firstAttribute="centerY" secondItem="sRa-mo-RcW" secondAttribute="centerY" id="nHS-jU-DBk"/>
+                                        <constraint firstItem="4aU-Oi-YHk" firstAttribute="centerX" secondItem="sRa-mo-RcW" secondAttribute="centerX" id="wJt-cz-Rmv"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074509803920000006" green="0.058823529409999999" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="UhF-0r-VAB" firstAttribute="leading" secondItem="zwJ-8C-IQC" secondAttribute="leading" constant="24" id="1CQ-36-XaA"/>
+                            <constraint firstItem="9Bb-il-2j0" firstAttribute="height" secondItem="Icn-h8-0F8" secondAttribute="height" multiplier="1:4" id="1Ct-VM-Wg6"/>
+                            <constraint firstItem="zwJ-8C-IQC" firstAttribute="trailing" secondItem="UhF-0r-VAB" secondAttribute="trailing" constant="24" id="5Da-OI-REY"/>
+                            <constraint firstItem="2Fb-zK-cbz" firstAttribute="trailing" secondItem="zwJ-8C-IQC" secondAttribute="trailing" id="LBh-qr-YXH"/>
+                            <constraint firstItem="2Fb-zK-cbz" firstAttribute="top" secondItem="Icn-h8-0F8" secondAttribute="top" id="M6v-h6-3mt"/>
+                            <constraint firstAttribute="bottom" secondItem="2Fb-zK-cbz" secondAttribute="bottom" id="P9W-fC-yxP"/>
+                            <constraint firstItem="9Bb-il-2j0" firstAttribute="top" secondItem="zwJ-8C-IQC" secondAttribute="top" constant="68" id="TEU-p2-Tog"/>
+                            <constraint firstItem="2Fb-zK-cbz" firstAttribute="leading" secondItem="zwJ-8C-IQC" secondAttribute="leading" id="csM-Gs-Cfl"/>
+                            <constraint firstItem="UhF-0r-VAB" firstAttribute="top" secondItem="9Bb-il-2j0" secondAttribute="bottom" constant="21" id="v6v-7R-yNa"/>
+                            <constraint firstItem="9Bb-il-2j0" firstAttribute="leading" secondItem="zwJ-8C-IQC" secondAttribute="leading" constant="24" id="vUT-ip-QIb"/>
+                            <constraint firstItem="UhF-0r-VAB" firstAttribute="bottom" secondItem="zwJ-8C-IQC" secondAttribute="bottom" constant="24" id="vsD-1c-bMA"/>
+                            <constraint firstItem="zwJ-8C-IQC" firstAttribute="trailing" secondItem="9Bb-il-2j0" secondAttribute="trailing" constant="24" id="xc4-Jv-Tkg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zwJ-8C-IQC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Qia-fL-wjo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="vup-Wl-W78">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="butDeleteTapped:" destination="Bdx-KQ-rq2" id="ICs-Hm-dwC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="blurEffect" destination="2Fb-zK-cbz" id="icQ-ig-dA8"/>
+                        <outlet property="butLogin" destination="oCa-Q1-S7K" id="bWK-6m-vGh"/>
+                        <outlet property="butPassword" destination="uEY-bU-NlK" id="uhq-ZP-dfK"/>
+                        <outlet property="labCopied" destination="Hm5-lx-tCH" id="3Mw-qG-gUc"/>
+                        <outlet property="viewLogin" destination="gfK-aY-kFL" id="PD1-EH-7xd"/>
+                        <outlet property="viewPassword" destination="cff-gV-Me4" id="zRP-gj-twK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4I-jk-ozd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="62.946428571428569"/>
+        </scene>
+    </scenes>
+</document>

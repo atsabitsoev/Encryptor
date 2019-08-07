@@ -12,10 +12,6 @@ import Foundation
 class AccountListService {
     
     
-    private init() {}
-    static let standard = AccountListService()
-    
-    
     var accountList: [[String]] {
         get {
             return (UserDefaults.standard.object(forKey: "accountList") as? [[String]]) ?? []

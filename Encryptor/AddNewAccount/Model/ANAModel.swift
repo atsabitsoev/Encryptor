@@ -27,9 +27,9 @@ class ANAModel: ANAModelDelegate {
     
     
     private func saveTitleLogin(title: String, login: String) {
-        var list = AccountListService.standard.accountList
+        var list = AccountListService().accountList
         list.append([title, login])
-        AccountListService.standard.accountList = list
+        AccountListService().accountList = list
     }
     
     private func savePassword(login: String, password: String) {

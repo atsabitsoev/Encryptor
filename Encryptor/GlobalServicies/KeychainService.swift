@@ -20,4 +20,8 @@ class KeychainService {
     static func password(for login: String) -> String {
         return KeychainSwift().get(login) ?? ""
     }
+    
+    static func delete(login: String) {
+        KeychainSwift().delete(login)
+    }
 }

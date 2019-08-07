@@ -20,6 +20,9 @@ extension LOPView: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell") as! AccountCell
         cell.title = masTitles[indexPath.row]
+        cell.row = indexPath.row
+        cell.delegate = self
+        
         return cell
     }
     

@@ -12,13 +12,18 @@ class LOPView: UIViewController, LOPViewDelegate {
     
     
     
+    
     private var controller: LOPControllerDelegate!
     
     
     @IBOutlet weak var tableView: UITableView!
     
     
-    var masTitles: [String] = []
+    var masTitles: [String] = [] {
+        didSet {
+            print("masTitles \(masTitles)")
+        }
+    }
     
     
     override func viewDidLoad() {
@@ -49,6 +54,14 @@ class LOPView: UIViewController, LOPViewDelegate {
     func updateData(accountList: [String]) {
         self.masTitles = accountList
         tableView.reloadData()
+    }
+    
+    
+    func goToShowingAccountView(row: Int) {
+        let storyboard = UIStoryboard(name: "ShowingAccount", bundle: nil)
+        let showingAccountView = storyboard.instantiateViewController(withIdentifier: "ShowingAccountView") as! ShowingAccountView
+        showingAccountView.row = row
+        self.navigationController?.show(showingAccountView, sender: nil)
     }
     
     

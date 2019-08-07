@@ -22,7 +22,7 @@ class LOPModel: LOPModelDelegate {
     
     
     func getTitles() -> [String] {
-        let accounts = AccountListService.standard.accountList
+        let accounts = AccountListService().accountList
         let titles = accounts.map { (titleLogin) -> String in
             return titleLogin[0]
         }

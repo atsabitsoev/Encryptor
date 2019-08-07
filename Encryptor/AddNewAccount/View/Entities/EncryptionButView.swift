@@ -29,18 +29,28 @@ class EncryptionButView: UIButton {
     }
     
     
+    override var frame: CGRect {
+        didSet {
+            if oldValue.width < frame.width {
+                frame = oldValue
+            }
+        }
+    }
+    
+    override var bounds: CGRect {
+        didSet {
+            if oldValue.width < bounds.width {
+                bounds = oldValue
+            }
+        }
+    }
+    
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
         layer.cornerRadius = bounds.height / 2
         clipsToBounds = true
-    }
-    
-    
-    override var frame: CGRect {
-        didSet {
-            print(frame)
-        }
     }
     
     
@@ -124,7 +134,7 @@ class EncryptionButView: UIButton {
         
         UIView.animate(withDuration: 0.3,
                        animations: {
-                        
+
                         self.frame = CGRect(x: self.center.x - circleRadius,
                                             y: self.center.y - circleRadius,
                                             width: circleRadius * 2,

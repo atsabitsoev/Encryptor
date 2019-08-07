@@ -60,7 +60,11 @@ class SliderView: UIView {
     
     
     var action: () -> () = {}
-    var titleText: String = "Это текст"
+    var titleText: String = "Это текст" {
+        didSet {
+            labTitle.text = titleText
+        }
+    }
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
