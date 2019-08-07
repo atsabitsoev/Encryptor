@@ -17,11 +17,16 @@ class LOPView: UIViewController, LOPViewDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var labHolder: UILabel!
     
     
     var masTitles: [String] = [] {
         didSet {
-            print("masTitles \(masTitles)")
+            if masTitles.count == 0 {
+                labHolder.isHidden = false
+            } else {
+                labHolder.isHidden = true
+            }
         }
     }
     
