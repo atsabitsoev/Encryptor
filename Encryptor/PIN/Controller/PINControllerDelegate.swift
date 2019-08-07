@@ -11,7 +11,7 @@ import Foundation
 
 protocol PINControllerDelegate {
     
-    
+    func viewDidAppear()
     func rightCodeEntered()
     func wrongCodeEntered()
     func butNumberTapped(symbol: String)

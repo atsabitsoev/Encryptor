@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioToolbox
+import LocalAuthentication
 
 
 class PINView: UIViewController, PINViewDelegate {
@@ -24,6 +25,12 @@ class PINView: UIViewController, PINViewDelegate {
         super.viewDidLoad()
 
         configureView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        controller.viewDidAppear()
     }
     
     override func viewWillLayoutSubviews() {
@@ -74,6 +81,37 @@ class PINView: UIViewController, PINViewDelegate {
     }
     
     
+    func enableBiometricScanner() {
+        touchFaceAuth()
+    }
+    
+    private func touchFaceAuth() {
+        
+        let myContext = LAContext()
+        let myLocalizedReasonString = "Биометрическая проверка"
+        
+        var authError: NSError?
+        if #available(iOS 8.0, macOS 10.12.1, *) {
+            if myContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+                myContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: myLocalizedReasonString) { success, evaluateError in
+                    
+                    DispatchQueue.main.async {
+                        if success {
+                            self.openApp()
+                        } else {
+                            print("Неправильный палец или лицо")
+                        }
+                    }
+                }
+            } else {
+                // Could not evaluate policy; look at authError and present an appropriate message to user
+                print("Sorry!!.. Could not evaluate policy.")
+            }
+        } else {
+            print("Не поддерживается")
+        }
+        
+    }
     
     
     @IBAction func butNumberTapped(_ sender: UIButton) {

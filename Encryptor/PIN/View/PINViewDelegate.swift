@@ -14,4 +14,5 @@ protocol PINViewDelegate {
     func setTextToLabCode(text: String)
     func showWrongPinError()
     func openApp()
+    func enableBiometricScanner()
 }

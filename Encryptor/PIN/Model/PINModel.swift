@@ -21,7 +21,8 @@ class PINModel: PINModelDelegate {
     
     
     private var currentCode = ""
-    private let rightCode = "11111" //UserDefaults.standard.string(forKey: "pin") ?? ""
+    private let rightCode = UserDefaults.standard.string(forKey: "pin") ?? "11111"
+    var isTouchFaceIdEnabled = UserDefaults.standard.bool(forKey: "isTouchFaceIdEnabled")
     
     
     func newNumberAdded(string: String) {

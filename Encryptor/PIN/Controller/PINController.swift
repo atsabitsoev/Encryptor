@@ -22,6 +22,11 @@ class PINController: PINControllerDelegate {
     private var model: PINModelDelegate!
     
     
+    func viewDidAppear() {
+        view.enableBiometricScanner()
+    }
+    
+    
     func rightCodeEntered() {
         view.openApp()
     }
