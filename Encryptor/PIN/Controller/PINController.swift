@@ -23,7 +23,9 @@ class PINController: PINControllerDelegate {
     
     
     func viewDidAppear() {
-        view.enableBiometricScanner()
+        if model.isTouchFaceIdEnabled {
+            view.enableBiometricScanner()
+        }
     }
     
     
