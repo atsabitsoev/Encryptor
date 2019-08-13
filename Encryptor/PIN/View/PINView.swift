@@ -122,4 +122,7 @@ class PINView: UIViewController, PINViewDelegate {
     @IBAction func butDeleteTapped(_ sender: UIButton) {
         controller.butDeleteTapped()
     }
+    
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 }
