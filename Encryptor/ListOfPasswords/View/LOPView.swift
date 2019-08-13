@@ -81,12 +81,26 @@ class LOPView: UIViewController, LOPViewDelegate {
     }
     
     
-    @IBAction func butAddTapped(_ sender: UIBarButtonItem) {
+    func goToAddNewAccountVC() {
         let storyboard = UIStoryboard(name: "CreationAccount", bundle: nil)
         let creationAccountVC = storyboard.instantiateInitialViewController()
         self.navigationController?.show(creationAccountVC!, sender: nil)
     }
     
+    func goToSettingsVC() {
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let settingsVC = storyboard.instantiateViewController(withIdentifier: "SettingsVC")
+        self.navigationController?.show(settingsVC, sender: nil)
+    }
+    
+    
+    @IBAction func butAddTapped(_ sender: UIBarButtonItem) {
+        controller.butAddTapped()
+    }
+    
+    @IBAction func butSettingsTapped(_ sender: UIBarButtonItem) {
+        controller.butSettingsTapped()
+    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
 

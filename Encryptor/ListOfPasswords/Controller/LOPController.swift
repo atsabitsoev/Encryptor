@@ -38,14 +38,22 @@ class LOPController: LOPControllerDelegate {
     
     private func addObservers() {
         
-        NotificationCenter.default.addObserver(view,
+        NotificationCenter.default.addObserver(view!,
                                                selector: #selector(view.startScrolling),
                                                name: NSNotification.Name("sliderEnded"),
                                                object: nil)
-        NotificationCenter.default.addObserver(view,
+        NotificationCenter.default.addObserver(view!,
                                                selector: #selector(view.stopScrolling),
                                                name: NSNotification.Name("sliderBegan"),
                                                object: nil)
+    }
+    
+    func butAddTapped() {
+        view.goToAddNewAccountVC()
+    }
+    
+    func butSettingsTapped() {
+        view.goToSettingsVC()
     }
     
 }

@@ -15,4 +15,5 @@ protocol PINModelDelegate {
     func newNumberAdded(string: String)
     func deleteLastSymbol()
     var isTouchFaceIdEnabled: Bool { get }
+    var userSetPin: Bool { get set }
 }

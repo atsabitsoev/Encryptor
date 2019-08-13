@@ -16,4 +16,6 @@ protocol LOPViewDelegate {
     @objc func stopScrolling()
     @objc func startScrolling()
     func goToShowingAccountView(row: Int) -> ()
+    func goToSettingsVC()
+    func goToAddNewAccountVC()
 }

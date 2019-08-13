@@ -30,6 +30,12 @@
 		AC671B5C22F8864500207A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC671B5B22F8864500207A1B /* AppDelegate.swift */; };
 		AC671B6322F8864800207A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6222F8864800207A1B /* Assets.xcassets */; };
 		AC671B6622F8864800207A1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC671B6422F8864800207A1B /* LaunchScreen.storyboard */; };
+		ACA4301F2302C16F001E7CCD /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA4301E2302C16F001E7CCD /* Settings.storyboard */; };
+		ACA430252302C1AD001E7CCD /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA430242302C1AD001E7CCD /* SettingsController.swift */; };
+		ACA430272302C1C4001E7CCD /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA430262302C1C4001E7CCD /* SettingsModel.swift */; };
+		ACA430292302C1E3001E7CCD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA430282302C1E3001E7CCD /* SettingsView.swift */; };
+		ACA4302B2302C2BD001E7CCD /* SettingsTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA4302A2302C2BD001E7CCD /* SettingsTableViewDelegate.swift */; };
+		ACA430362302D7D6001E7CCD /* SettingsTouchIdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA430352302D7D6001E7CCD /* SettingsTouchIdCell.swift */; };
 		ACBC6D6322FB1CEF00030A76 /* ANATFDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D6222FB1CEF00030A76 /* ANATFDelegate.swift */; };
 		ACBC6D6522FB270600030A76 /* PIN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACBC6D6422FB270600030A76 /* PIN.storyboard */; };
 		ACBC6D6B22FB3C9600030A76 /* PINView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC6D6A22FB3C9600030A76 /* PINView.swift */; };
@@ -80,6 +86,12 @@
 		AC671B6222F8864800207A1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC671B6522F8864800207A1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC671B6722F8864800207A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACA4301E2302C16F001E7CCD /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		ACA430242302C1AD001E7CCD /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		ACA430262302C1C4001E7CCD /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
+		ACA430282302C1E3001E7CCD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		ACA4302A2302C2BD001E7CCD /* SettingsTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewDelegate.swift; sourceTree = "<group>"; };
+		ACA430352302D7D6001E7CCD /* SettingsTouchIdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTouchIdCell.swift; sourceTree = "<group>"; };
 		ACBC6D6222FB1CEF00030A76 /* ANATFDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANATFDelegate.swift; sourceTree = "<group>"; };
 		ACBC6D6422FB270600030A76 /* PIN.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PIN.storyboard; sourceTree = "<group>"; };
 		ACBC6D6A22FB3C9600030A76 /* PINView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINView.swift; sourceTree = "<group>"; };
@@ -178,6 +190,7 @@
 				AC29ED9822F8D6250096947F /* CreationAccount.storyboard */,
 				ACD51D2922FA4AA0005DEAD0 /* ShowingAccount.storyboard */,
 				ACBC6D6422FB270600030A76 /* PIN.storyboard */,
+				ACA4301E2302C16F001E7CCD /* Settings.storyboard */,
 				AC671B5B22F8864500207A1B /* AppDelegate.swift */,
 				AC671B6222F8864800207A1B /* Assets.xcassets */,
 				AC671B6422F8864800207A1B /* LaunchScreen.storyboard */,
@@ -248,11 +261,48 @@
 				ACEC6A1222F8FEEE00D95B9C /* AddNewAccount */,
 				ACD51D2B22FA5045005DEAD0 /* ShowingAccount */,
 				ACBC6D6622FB3C7100030A76 /* PIN */,
+				ACA430202302C17D001E7CCD /* Settings */,
 				AC29ED8122F8A0580096947F /* SupportingFiles */,
 				AC671B6722F8864800207A1B /* Info.plist */,
 				AC29ED8E22F8B2250096947F /* Шрифты */,
 			);
 			path = Encryptor;
+			sourceTree = "<group>";
+		};
+		ACA430202302C17D001E7CCD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				ACA430232302C197001E7CCD /* Controller */,
+				ACA430222302C193001E7CCD /* View */,
+				ACA430212302C18E001E7CCD /* Model */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		ACA430212302C18E001E7CCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACA430262302C1C4001E7CCD /* SettingsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACA430222302C193001E7CCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACA430282302C1E3001E7CCD /* SettingsView.swift */,
+				ACA4302A2302C2BD001E7CCD /* SettingsTableViewDelegate.swift */,
+				ACA430352302D7D6001E7CCD /* SettingsTouchIdCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACA430232302C197001E7CCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ACA430242302C1AD001E7CCD /* SettingsController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		ACBC6D6622FB3C7100030A76 /* PIN */ = {
@@ -455,6 +505,7 @@
 				AC671B6322F8864800207A1B /* Assets.xcassets in Resources */,
 				AC29ED8322F8A07F0096947F /* ListOfPasswords.storyboard in Resources */,
 				AC29ED9922F8D6250096947F /* CreationAccount.storyboard in Resources */,
+				ACA4301F2302C16F001E7CCD /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,15 +563,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA430272302C1C4001E7CCD /* SettingsModel.swift in Sources */,
 				AC29ED7B22F89ED90096947F /* LOPControllerDelegate.swift in Sources */,
 				AC29ED9C22F8D6EB0096947F /* EncryptionButView.swift in Sources */,
 				ACEC6A2122F8FF8500D95B9C /* ANAModel.swift in Sources */,
 				AC29ED7722F89EB50096947F /* LOPModel.swift in Sources */,
 				ACEC6A1722F8FF3C00D95B9C /* ANAView.swift in Sources */,
+				ACA430292302C1E3001E7CCD /* SettingsView.swift in Sources */,
 				AC29ED7D22F89EE50096947F /* LOPModelDelegate.swift in Sources */,
 				ACD51D3822FA50C0005DEAD0 /* ShowingAccountModelDelegate.swift in Sources */,
 				ACD51D3A22FA50EE005DEAD0 /* ShowingAccountController.swift in Sources */,
 				ACD51D3022FA506E005DEAD0 /* ShowingAccountView.swift in Sources */,
+				ACA4302B2302C2BD001E7CCD /* SettingsTableViewDelegate.swift in Sources */,
 				ACD51D3222FA5081005DEAD0 /* ShowingAccountViewDelegate.swift in Sources */,
 				AC29ED8722F8A59B0096947F /* RoundedCornersView.swift in Sources */,
 				ACD51D3422FA50A7005DEAD0 /* ShowingAccountModel.swift in Sources */,
@@ -543,8 +597,10 @@
 				ACBC6D7722FB3CE000030A76 /* PINModelDelegate.swift in Sources */,
 				ACEC6A1B22F8FF5A00D95B9C /* ANAViewDelegate.swift in Sources */,
 				ACBC6D7122FB3CC100030A76 /* PINControllerDelegate.swift in Sources */,
+				ACA430252302C1AD001E7CCD /* SettingsController.swift in Sources */,
 				ACEC6A2322F8FF8F00D95B9C /* ANAModelDelegate.swift in Sources */,
 				AC29ED8522F8A1890096947F /* LOPView.swift in Sources */,
+				ACA430362302D7D6001E7CCD /* SettingsTouchIdCell.swift in Sources */,
 				ACBC6D6322FB1CEF00030A76 /* ANATFDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

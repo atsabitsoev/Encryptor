@@ -21,7 +21,9 @@ class PINModel: PINModelDelegate {
     
     
     private var currentCode = ""
-    private let rightCode = UserDefaults.standard.string(forKey: "pin") ?? "11111"
+    private let rightCode = UserDefaults.standard.string(forKey: "pin") ?? ""
+    
+    lazy var userSetPin = rightCode != ""
     var isTouchFaceIdEnabled = UserDefaults.standard.bool(forKey: "isTouchFaceIdEnabled")
     
     

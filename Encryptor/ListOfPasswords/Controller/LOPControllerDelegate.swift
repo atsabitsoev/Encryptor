@@ -14,4 +14,6 @@ protocol LOPControllerDelegate {
     
     func viewDidLoad()
     func viewDidAppear()
+    func butAddTapped()
+    func butSettingsTapped()
 }
