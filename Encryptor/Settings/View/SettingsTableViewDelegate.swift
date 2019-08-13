@@ -22,6 +22,7 @@ extension SettingsView: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "settingsTouchIdCell") as! SettingsTouchIdCell
             cell.switchControl.setOn(isSwitchEnabled, animated: false)
+            cell.labTitle.text = UIScreen.main.bounds.height >= 812 ? "Face ID" : "Touch ID"
             return cell
         case 1:
             return tableView.dequeueReusableCell(withIdentifier: "settingsChangePinCell")!

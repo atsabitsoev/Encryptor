@@ -12,6 +12,7 @@ class SettingsTouchIdCell: UITableViewCell {
 
     
     @IBOutlet weak var switchControl: UISwitch!
+    @IBOutlet weak var labTitle: UILabel!
     
     
     override func awakeFromNib() {
